@@ -452,7 +452,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="list-gallery d-none">
+				<div class="list-gallery">
 					<div class="gallery-gird-1">
 						<div class="item">
 							<img src="images/slide1.jpg" alt="">
@@ -503,7 +503,7 @@
 						<span class="d-none d-md-block">All photos</span>
 					</a>
 				</div>
-				<div class="list-gallery d-none">
+				<div class="list-gallery">
 					<div class="gallery-gird-2">
 						<div class="item">
 							<img src="images/slide1.jpg" alt="">
@@ -541,7 +541,7 @@
 						<span class="d-none d-md-block">All photos</span>
 					</a>
 				</div>
-				<div class="list-gallery d-none">
+				<div class="list-gallery">
 					<div class="gallery-gird-slide">
 						<div class="item">
 							<img src="images/slide1.jpg" alt="">
@@ -579,7 +579,7 @@
 						<span class="d-none d-md-block">All photos</span>
 					</a>
 				</div>
-				<div class="list-gallery d-none">
+				<div class="list-gallery">
 					<div class="gallery-gird-4">
 						<div class="item">
 							<img src="images/slide1.jpg" alt="">
@@ -611,67 +611,176 @@
 						<span class="d-none d-md-block">All photos</span>
 					</a>
 				</div>
-				<div class="list-gallery list-gallery-slide2">
-					<div class="gallery-gird-slide2">
-						<div class="item">
-							<img src="images/slide1.jpg" alt="">
-						</div>
-						<div class="item">
-							<img src="images/slide7.jpg" alt="">
-						</div>
-						<div class="item">
-							<img src="images/slide2.jpg" alt="">
-						</div>
-					</div>
-					<div class="list-gallery-cart">
-						<div class="box-cart">
-							<div class="cart-meta-top">
-								<span class="cart-title">
-									From
-								</span>
-								<span class="cart-discount">-10%</span>
+				<div class="list-gallery list-gallery-slide2 row">
+					<div class="col-md-8">
+						<div class="gallery-gird-slide2">
+							<div class="item">
+								<img src="images/slide1.jpg" alt="">
+							</div>
+							<div class="item">
+								<img src="images/slide7.jpg" alt="">
+							</div>
+							<div class="item">
+								<img src="images/slide2.jpg" alt="">
 							</div>
 						</div>
-						<div class="cart-meta-price">
-							<span class="sale-price">$450</span>
-							<span class="regular-price">$350</span>
-							<span>/person</span>
+					</div>
+					<div class="col-md-4">
+						<div class="list-gallery-cart">
+							<div class="box-cart">
+								<div class="cart-meta-top">
+									<span class="cart-title">
+										From
+									</span>
+									<span class="cart-discount">-10%</span>
+								</div>
+								<div class="cart-meta-price">
+									<span class="sale-price">$450</span>
+									<span class="regular-price">$350</span>
+									<span>/person</span>
+								</div>
+								<div class="cart-meta-note">
+									<span>Price varies by group size. <a href="">View all prices.</a></span>
+								</div>
+								<form action="" class="form-cart">
+									<div class="box-field">
+										<label for="formdate" class="btn-inp">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+												viewBox="0 0 22 22" fill="none">
+												<path
+													d="M2.75 10.9993C2.75 7.11026 2.75 6.08238 3.95818 4.8742C5.16637 3.66602 7.11091 3.66602 11 3.66602C14.8891 3.66602 16.8336 3.66602 18.0418 4.8742C19.25 6.08238 19.25 7.11026 19.25 10.9993C19.25 14.8884 19.25 16.833 18.0418 18.0412C16.8336 19.2493 14.8891 19.2493 11 19.2493C7.11091 19.2493 5.16637 19.2493 3.95818 18.0412C2.75 16.833 2.75 14.8884 2.75 10.9993Z"
+													stroke="#111111" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round" />
+												<path d="M15.125 4.58333V2.75" stroke="#111111" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M6.875 4.58333V2.75" stroke="#111111" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M2.97852 7.33398H19.0202" stroke="#111111" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+											<span>Date</span>
+											<input type="date" name="formdate" id="formdate" hidden>
+										</label>
+										<label for="formguest" class="btn-inp">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+												viewBox="0 0 22 22" fill="none">
+												<path
+													d="M15.5833 17.875C15.5833 16.3562 13.5313 15.125 11 15.125C8.46869 15.125 6.41667 16.3562 6.41667 17.875M19.25 15.1253C19.25 13.9977 18.1187 13.0285 16.5 12.6042M2.75 15.1253C2.75 13.9977 3.88125 13.0285 5.5 12.6042M16.5 8.92476C17.0626 8.42122 17.4167 7.68946 17.4167 6.875C17.4167 5.35622 16.1855 4.125 14.6667 4.125C13.9623 4.125 13.3199 4.38978 12.8333 4.82524M5.5 8.92476C4.9374 8.42122 4.58333 7.68946 4.58333 6.875C4.58333 5.35622 5.81455 4.125 7.33333 4.125C8.03766 4.125 8.68014 4.38978 9.16667 4.82524M11 12.375C9.48122 12.375 8.25 11.1438 8.25 9.625C8.25 8.10622 9.48122 6.875 11 6.875C12.5188 6.875 13.75 8.10622 13.75 9.625C13.75 11.1438 12.5188 12.375 11 12.375Z"
+													stroke="#111111" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<span>Guest</span>
+											<input type="text" name="formguest" id="formguest" hidden>
+										</label>
+									</div>
+									<div class="form-cta">
+										<a href="" class="btn-form">Check availability</a>
+										<a href="" class="btn-form">Make enquiry</a>
+									</div>
+								</form>
+							</div>
+							<div class="box-cart">
+								<p class="box-cat-plan">Plan your adventure</p>
+								<p class="box-cat-plan-item"><img src="images/download.svg" alt="">Download PDF brochure
+								</p>
+								<p class="box-cat-plan-item"><img src="images/question-circle.svg" alt="">Ask a question
+								</p>
+								<p class="box-cat-plan-item"><img src="images/telephone-call.svg" alt="">Hotline: 00 235
+									9845</p>
+							</div>
 						</div>
-						<div class="cart-meta-note">
-							<span>Price varies by group size. <a href="">View all prices.</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="list-gallery list-gallery-big">
+				<div class="gallery-gird-slide2">
+					<div class="item">
+						<img src="images/slide1.jpg" alt="">
+					</div>
+					<div class="item">
+						<img src="images/slide7.jpg" alt="">
+					</div>
+					<div class="item">
+						<img src="images/slide2.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						
+					</div>
+					<div class="col-md-4">
+						<div class="list-box-cart">
+							<div class="box-cart">
+								<div class="cart-meta-top">
+									<span class="cart-title">
+										From
+									</span>
+									<span class="cart-discount">-10%</span>
+								</div>
+								<div class="cart-meta-price">
+									<span class="sale-price">$450</span>
+									<span class="regular-price">$350</span>
+									<span>/person</span>
+								</div>
+								<div class="cart-meta-note">
+									<span>Price varies by group size. <a href="">View all prices.</a></span>
+								</div>
+								<form action="" class="form-cart">
+									<div class="box-field">
+										<label for="formdate" class="btn-inp">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+												viewBox="0 0 22 22" fill="none">
+												<path
+													d="M2.75 10.9993C2.75 7.11026 2.75 6.08238 3.95818 4.8742C5.16637 3.66602 7.11091 3.66602 11 3.66602C14.8891 3.66602 16.8336 3.66602 18.0418 4.8742C19.25 6.08238 19.25 7.11026 19.25 10.9993C19.25 14.8884 19.25 16.833 18.0418 18.0412C16.8336 19.2493 14.8891 19.2493 11 19.2493C7.11091 19.2493 5.16637 19.2493 3.95818 18.0412C2.75 16.833 2.75 14.8884 2.75 10.9993Z"
+													stroke="#111111" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round" />
+												<path d="M15.125 4.58333V2.75" stroke="#111111" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M6.875 4.58333V2.75" stroke="#111111" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M2.97852 7.33398H19.0202" stroke="#111111" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+											<span>Date</span>
+											<input type="date" name="formdate" id="formdate" hidden>
+										</label>
+										<label for="formguest" class="btn-inp">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+												viewBox="0 0 22 22" fill="none">
+												<path
+													d="M15.5833 17.875C15.5833 16.3562 13.5313 15.125 11 15.125C8.46869 15.125 6.41667 16.3562 6.41667 17.875M19.25 15.1253C19.25 13.9977 18.1187 13.0285 16.5 12.6042M2.75 15.1253C2.75 13.9977 3.88125 13.0285 5.5 12.6042M16.5 8.92476C17.0626 8.42122 17.4167 7.68946 17.4167 6.875C17.4167 5.35622 16.1855 4.125 14.6667 4.125C13.9623 4.125 13.3199 4.38978 12.8333 4.82524M5.5 8.92476C4.9374 8.42122 4.58333 7.68946 4.58333 6.875C4.58333 5.35622 5.81455 4.125 7.33333 4.125C8.03766 4.125 8.68014 4.38978 9.16667 4.82524M11 12.375C9.48122 12.375 8.25 11.1438 8.25 9.625C8.25 8.10622 9.48122 6.875 11 6.875C12.5188 6.875 13.75 8.10622 13.75 9.625C13.75 11.1438 12.5188 12.375 11 12.375Z"
+													stroke="#111111" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<span>Guest</span>
+											<input type="text" name="formguest" id="formguest" hidden>
+										</label>
+									</div>
+									<div class="form-cta">
+										<a href="" class="btn-form">Check availability</a>
+										<a href="" class="btn-form">Make enquiry</a>
+									</div>
+								</form>
+							</div>
+							<div class="box-cart">
+								<p class="box-cat-plan">Why booking with Togo?</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Free cancellation up to 24 hours</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Trusted by 100K+ travelers</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Get the lowest prices</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">24-hour support</p>
+							</div>
+							<div class="box-cart">
+								<p class="box-cat-plan">Plan your adventure</p>
+								<p class="box-cat-plan-item"><img src="images/download.svg" alt="">Download PDF brochure
+								</p>
+								<p class="box-cat-plan-item"><img src="images/question-circle.svg" alt="">Ask a question
+								</p>
+								<p class="box-cat-plan-item"><img src="images/telephone-call.svg" alt="">Hotline: 00 235
+									9845</p>
+							</div>
 						</div>
-						<form action="" class="form-cart">
-							<label for="formdate" class="btn-inp">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
-									fill="none">
-									<path
-										d="M2.75 10.9993C2.75 7.11026 2.75 6.08238 3.95818 4.8742C5.16637 3.66602 7.11091 3.66602 11 3.66602C14.8891 3.66602 16.8336 3.66602 18.0418 4.8742C19.25 6.08238 19.25 7.11026 19.25 10.9993C19.25 14.8884 19.25 16.833 18.0418 18.0412C16.8336 19.2493 14.8891 19.2493 11 19.2493C7.11091 19.2493 5.16637 19.2493 3.95818 18.0412C2.75 16.833 2.75 14.8884 2.75 10.9993Z"
-										stroke="#111111" stroke-width="1.5" stroke-linecap="round"
-										stroke-linejoin="round" />
-									<path d="M15.125 4.58333V2.75" stroke="#111111" stroke-width="1.5"
-										stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M6.875 4.58333V2.75" stroke="#111111" stroke-width="1.5"
-										stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M2.97852 7.33398H19.0202" stroke="#111111" stroke-width="1.5"
-										stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>Date</span>
-								<input type="date" name="formdate" id="formdate" hidden>
-							</label>
-							<label for="formguest" class="btn-inp">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
-									fill="none">
-									<path
-										d="M15.5833 17.875C15.5833 16.3562 13.5313 15.125 11 15.125C8.46869 15.125 6.41667 16.3562 6.41667 17.875M19.25 15.1253C19.25 13.9977 18.1187 13.0285 16.5 12.6042M2.75 15.1253C2.75 13.9977 3.88125 13.0285 5.5 12.6042M16.5 8.92476C17.0626 8.42122 17.4167 7.68946 17.4167 6.875C17.4167 5.35622 16.1855 4.125 14.6667 4.125C13.9623 4.125 13.3199 4.38978 12.8333 4.82524M5.5 8.92476C4.9374 8.42122 4.58333 7.68946 4.58333 6.875C4.58333 5.35622 5.81455 4.125 7.33333 4.125C8.03766 4.125 8.68014 4.38978 9.16667 4.82524M11 12.375C9.48122 12.375 8.25 11.1438 8.25 9.625C8.25 8.10622 9.48122 6.875 11 6.875C12.5188 6.875 13.75 8.10622 13.75 9.625C13.75 11.1438 12.5188 12.375 11 12.375Z"
-										stroke="#111111" stroke-width="1.5" stroke-linecap="round"
-										stroke-linejoin="round" />
-								</svg>
-								<span>Date</span>
-								<input type="text" name="formguest" id="formguest" hidden>
-							</label>
-							<a href="" class="btn-form">Check availability</a>
-							<a href="" class="btn-form">Make enquiry</a>
-						</form>
 					</div>
 				</div>
 			</div>

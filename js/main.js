@@ -178,6 +178,7 @@ var slide_function={
 
         var slide2=jQuery('.list-gallery .gallery-gird-slide2');
         var item_slide2=jQuery('.list-gallery .gallery-gird-slide2 .item');
+
         if(slide2.length>0&&item_slide2.length>1) {
             slide2.slick({
                 dots: false,
