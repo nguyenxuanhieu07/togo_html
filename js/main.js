@@ -405,7 +405,7 @@ jQuery(document).ready(function () {
             }
         });
     });
-    jQuery('.formguest').on('click',function(){
-        $(this).parent().find('.box-formguest').toggleClass('show-gues');
-    })
+    jQuery('.formguest').on('click', function () {
+        jQuery(this).parent().find('.box-formguest').toggleClass('show-gues');
+    });
 });

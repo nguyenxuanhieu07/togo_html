@@ -3217,6 +3217,11 @@ a:hover {
 .box-field{
     position: relative;
 }
+.box-field .formguest{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 0.5px solid #DDDDDD;
+}
 .box-formguest{
     display: none;
     flex-direction: column;
