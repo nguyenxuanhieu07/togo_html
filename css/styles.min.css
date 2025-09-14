@@ -3235,7 +3235,7 @@ a:hover {
     right: 0;
     transform: translateY(0.75rem);
     padding: 1.5rem;
-    width: 100%;
+    width: max-content;
     z-index: 9;
     font-family: "Outfit", sans-serif;
 }
@@ -3249,7 +3249,7 @@ a:hover {
     min-height: unset;
     border: 0;
     text-align: center;
-    width: 50px;
+    width: 40px;
 }
 
 .box-formguest input[type=number]::-webkit-inner-spin-button, 

@@ -405,7 +405,22 @@ jQuery(document).ready(function () {
             }
         });
     });
-    jQuery('.formguest').on('click', function () {
-        jQuery(this).parent().find('.box-formguest').toggleClass('show-gues');
+
+});
+document.querySelectorAll('.formguest').forEach(function(el, index) {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        let box = el.parentElement.querySelector('.box-formguest');
+        document.querySelectorAll('.box-formguest').forEach(function(b) {
+            b.classList.remove('show-gues');
+        });
+        box.classList.toggle('show-gues');
     });
 });
+
+document.addEventListener('click', function() {
+    document.querySelectorAll('.box-formguest').forEach(function(b) {
+        b.classList.remove('show-gues');
+    });
+});
+
