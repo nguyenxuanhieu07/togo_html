@@ -11,6 +11,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
 	<link rel="stylesheet" href="assets/slick-1.6.0/slick.css" />
 	<link rel="stylesheet" href="assets/slick-1.6.0/slick-theme.css" />
 	<link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -644,7 +645,7 @@
 								</div>
 								<form action="" class="form-cart">
 									<div class="box-field">
-										<label for="formdate" class="btn-inp">
+										<label for="datepicker" class="btn-inp openCalendar" id="openCalendar">
 											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
 												viewBox="0 0 22 22" fill="none">
 												<path
@@ -659,9 +660,9 @@
 													stroke-linecap="round" stroke-linejoin="round" />
 											</svg>
 											<span>Date</span>
-											<input type="date" name="formdate" id="formdate" hidden>
+											<input type="text" id="hiddenDate" name="formdate" hidden>
 										</label>
-										<label for="formguest" class="btn-inp">
+										<label for="formguest" class="btn-inp formguest">
 											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
 												viewBox="0 0 22 22" fill="none">
 												<path
@@ -672,6 +673,36 @@
 											<span>Guest</span>
 											<input type="text" name="formguest" id="formguest" hidden>
 										</label>
+										<div class="box-formguest">
+											<p class="note">You can select up to 12 travelers in total.</p>
+											<div class="box-list-ques">
+												<div class="box-formguest-item">
+													<div class="text">
+														<span>Adult</span>
+														<br>
+														<span>Age 13+</span>
+													</div>
+													<div class="form-input">
+														<span class="minus">-</span>
+														<input type="number" name="adult" value="0">
+														<span class="plus">+</span>
+													</div>
+												</div>
+												<div class="box-formguest-item">
+													<div class="text">
+														<span>Children</span>
+														<br>
+														<span>Age 3 - 12</span>
+													</div>
+													<div class="form-input">
+														<span class="minus">-</span>
+														<input type="number" name="children" value="0">
+														<span class="plus">+</span>
+													</div>
+												</div>
+											</div>
+											<a href="" class="btn-apply-guest">Apply</a>
+										</div>
 									</div>
 									<div class="form-cta">
 										<a href="" class="btn-form">Check availability</a>
@@ -708,7 +739,517 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
-						
+						<div class="box-single">
+							<h2 class="box-title">Overview</h2>
+							<ul class="box-content-list box-flex">
+								<li><span class="icon"><img src="images/clock-eight.svg" alt=""></span><span>Duration:
+										10 days</span></li>
+								<li><span class="icon"><img src="images/users-group_2.svg" alt=""></span><span>Group
+										size: 10 peoples</span></li>
+								<li><span class="icon"><img src="images/box.svg" alt=""></span><span>Tour Type: Group
+										tour</span></li>
+								<li><span class="icon"><img src="images/globe.svg" alt=""></span><span>Live guide:
+										English, Francais</span></li>
+								<li><span class="icon"><img src="images/user-check.svg" alt=""></span><span>Age range:
+										18 to 45</span></li>
+								<li><span class="icon"><img src="images/mobile.svg" alt=""></span><span>Mobile ticket:
+										Yes</span></li>
+							</ul>
+							<div class="box-content">
+								<p>Leave your guidebooks at home and dive into the local cultures that make each
+									destination so special. We’ll connect you with our exclusive experiences. Each trip
+									is carefully crafted to let enjoy your vacation.</p>
+								<p>
+									A wonderful serenity has taken possession of my entire soul, like these sweet
+									mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm
+									of existence in this spot, which was created for the bliss of souls like mine. I am
+									so happy, so absorbed in the exquisite sense of mere tranquil existence, that I
+									neglect my talents
+								</p>
+							</div>
+							<a href="" class="box-readmore">Read more.</a>
+						</div>
+						<div class="box-single">
+							<h2 class="box-title">Highlights</h2>
+							<ul class="box-content-list">
+								<li><img src="images/check-waves.svg" alt=""><span>Relax at the beach and cycle through
+										local villages.</span></li>
+								<li><img src="images/check-waves.svg" alt=""><span>Search for the wildlife in Udawalawe
+										National Park.</span></li>
+								<li><img src="images/check-waves.svg" alt=""><span>Dip in the pool in Sigiriya and climb
+										the Sigiriya Rock.</span></li>
+							</ul>
+						</div>
+						<div class="box-single">
+							<h2 class="box-title">Included/Excluded</h2>
+							<ul class="box-content-list box-flex">
+								<li class="check"><img src="images/check.svg"><span>Air fares</span></li>
+								<li class="nope"><img src="images/x.svg" alt=""><span>Air fares</span></li>
+								<li class="check"><img src="images/check.svg"><span>3 Nights Hotel Accomodation</span>
+								</li>
+								<li class="nope"><img src="images/x.svg" alt=""><span>3 Nights Hotel Accomodation</span>
+								</li>
+								<li class="check"><img src="images/check.svg"><span>On Trip Transport</span></li>
+								<li class="nope"><img src="images/x.svg" alt=""><span>On Trip Transport</span></li>
+								<li class="check"><img src="images/check.svg"><span>2 Meals / day</span></li>
+								<li class="nope"><img src="images/x.svg" alt=""><span>2 Meals / day</span></li>
+							</ul>
+						</div>
+						<div class="box-single">
+							<h2 class="box-title">Cancellation policy</h2>
+							<div class="box-content">
+								<p>You can cancel up to 24 hours in advance of the experience for a full refund.</p>
+							</div>
+						</div>
+						<div class="box-single">
+							<div class="box-single-flex">
+								<h2 class="box-title">Itinerary</h2>
+								<a href="" class="box-title-link">Expand all</a>
+							</div>
+							<div class="accordion" id="accordion-schedule">
+								<div class="card-header-flex">
+									<span class="cart-icon-location cart-icon">
+										<img src="images/location.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="headingOne">
+											<h2 class="mb-0 ">
+												<button class="btn  btn-block text-left" type="button"
+													data-toggle="collapse" data-target="#collapseOne"
+													aria-expanded="false" aria-controls="collapseOne">
+													<span>Day 1: Drive from Kathmandu to Pokhara</span>
+												</button>
+											</h2>
+										</div>
+
+										<div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												Some placeholder content for the first accordion panel. This panel is
+												shown
+												by default, thanks to the <code>.show</code> class.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-header-flex">
+									<span class="cart-icon">
+										<img src="images/crile.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="headingTwo">
+											<h2 class="mb-0">
+												<button class="btn  btn-block text-left collapsed" type="button"
+													data-toggle="collapse" data-target="#collapseTwo"
+													aria-expanded="false" aria-controls="collapseTwo">
+													Day 2: Drive to Ulleri and then trek to Ghorepani
+												</button>
+											</h2>
+										</div>
+										<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												Some placeholder content for the second accordion panel. This panel is
+												hidden by default.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-header-flex">
+									<span class="cart-icon">
+										<img src="images/crile.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="headingThree">
+											<h2 class="mb-0">
+												<button class="btn  btn-block text-left collapsed" type="button"
+													data-toggle="collapse" data-target="#collapseThree"
+													aria-expanded="false" aria-controls="collapseThree">
+													Day 3: Trek from Ghorepani to Tadapani
+												</button>
+											</h2>
+										</div>
+										<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												And lastly, the placeholder content for the third and final accordion
+												panel.
+												This panel is hidden by default.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-header-flex">
+									<span class="cart-icon">
+										<img src="images/crile.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="heading4">
+											<h2 class="mb-0">
+												<button class="btn  btn-block text-left collapsed" type="button"
+													data-toggle="collapse" data-target="#collapse4"
+													aria-expanded="false" aria-controls="collapse4">
+													Day 4: Trek from Tadapani to Chhomrong (2170m)
+												</button>
+											</h2>
+										</div>
+										<div id="collapse4" class="collapse" aria-labelledby="heading4"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												And lastly, the placeholder content for the third and final accordion
+												panel.
+												This panel is hidden by default.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-header-flex">
+									<span class="cart-icon">
+										<img src="images/crile.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="heading5">
+											<h2 class="mb-0">
+												<button class="btn  btn-block text-left collapsed" type="button"
+													data-toggle="collapse" data-target="#collapse5"
+													aria-expanded="false" aria-controls="collapse5">
+													Day 5: Trek from Chhomrong to Himalaya (2920m)
+												</button>
+											</h2>
+										</div>
+										<div id="collapse5" class="collapse" aria-labelledby="heading5"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												And lastly, the placeholder content for the third and final accordion
+												panel.
+												This panel is hidden by default.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-header-flex">
+									<span class="cart-icon">
+										<img src="images/crile.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="heading6">
+											<h2 class="mb-0">
+												<button class="btn  btn-block text-left collapsed" type="button"
+													data-toggle="collapse" data-target="#collapse6"
+													aria-expanded="false" aria-controls="collapse6">
+													Day 6: Trek from Himalaya to Annapurna Base Camp (4130 m)
+												</button>
+											</h2>
+										</div>
+										<div id="collapse6" class="collapse" aria-labelledby="heading6"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												And lastly, the placeholder content for the third and final accordion
+												panel.
+												This panel is hidden by default.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-header-flex">
+									<span class="cart-icon-location cart-icon">
+										<img src="images/flag-one.svg" alt="">
+									</span>
+									<div class="card">
+										<div class="card-header" id="heading7">
+											<h2 class="mb-0">
+												<button class="btn  btn-block text-left collapsed" type="button"
+													data-toggle="collapse" data-target="#collapse7"
+													aria-expanded="false" aria-controls="collapse7">
+													Day 7: Drive back to Kathmandu
+												</button>
+											</h2>
+										</div>
+										<div id="collapse7" class="collapse" aria-labelledby="heading7"
+											data-parent="#accordion-schedule">
+											<div class="card-body">
+												And lastly, the placeholder content for the third and final accordion
+												panel.
+												This panel is hidden by default.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-single">
+							<div class="box-single-flex">
+								<h2 class="box-title">Tour maps</h2>
+								<a href="" class="box-title-link">Open in Google Maps <img
+										src="images/external-link.svg" alt=""></a>
+							</div>
+							<div class="box-map">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192860.52845569418!2d13.259927537862056!3d52.506938616207805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2zQsOpYy1saW4sIMSQ4bupYw!5e1!3m2!1svi!2s!4v1757820183514!5m2!1svi!2s"
+									width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+						</div>
+						<div class="box-single">
+							<h2 class="box-title">Frequently asked questions</h2>
+							<div class="accordion" id="accordion-question">
+								<div class="card">
+									<div class="card-header" id="headingOne">
+										<h2 class="mb-0">
+											<button class="btn  btn-block text-left" type="button"
+												data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+												aria-controls="collapseOne">
+												Can I get the refund?
+											</button>
+										</h2>
+									</div>
+
+									<div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+										data-parent="#accordion-question">
+										<div class="card-body">
+											Some placeholder content for the first accordion panel. This panel is shown
+											by default, thanks to the <code>.show</code> class.
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="headingTwo">
+										<h2 class="mb-0">
+											<button class="btn  btn-block text-left collapsed" type="button"
+												data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+												aria-controls="collapseTwo">
+												My discount code is not working, what do I do?
+											</button>
+										</h2>
+									</div>
+									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+										data-parent="#accordion-question">
+										<div class="card-body">
+											Some placeholder content for the second accordion panel. This panel is
+											hidden by default.
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="headingThree">
+										<h2 class="mb-0">
+											<button class="btn  btn-block text-left collapsed" type="button"
+												data-toggle="collapse" data-target="#collapseThree"
+												aria-expanded="false" aria-controls="collapseThree">
+												Can I change the travel date?
+											</button>
+										</h2>
+									</div>
+									<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+										data-parent="#accordion-question">
+										<div class="card-body">
+											And lastly, the placeholder content for the third and final accordion panel.
+											This panel is hidden by default.
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="heading4">
+										<h2 class="mb-0">
+											<button class="btn  btn-block text-left collapsed" type="button"
+												data-toggle="collapse" data-target="#collapse4" aria-expanded="false"
+												aria-controls="collapse4">
+												Do I need to apply visa?
+											</button>
+										</h2>
+									</div>
+									<div id="collapse4" class="collapse" aria-labelledby="heading4"
+										data-parent="#accordion-question">
+										<div class="card-body">
+											And lastly, the placeholder content for the third and final accordion panel.
+											This panel is hidden by default.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-single box-single-service">
+							<h2 class="box-title">Extra Services</h2>
+							<div class="list-box-service">
+								<div class="row list-service">
+									<div class="col-6 col-md-3 item">
+										<div class="box-service">
+											<div class="box-service-icon">
+												<img src="images/noun-taxi.svg" alt="">
+											</div>
+											<h6 class="box-title">Airport transfers</h6>
+											<p class="box-desc">There are many variations of passages of Lorem Ipsum
+												available</p>
+											<p class="box-price">$30 /person</p>
+										</div>
+									</div>
+									<div class="col-6 col-md-3 item">
+										<div class="box-service">
+											<div class="box-service-icon">
+												<img src="images/noun-souvenir.svg" alt="">
+											</div>
+											<h6 class="box-title">Souvenir package</h6>
+											<p class="box-desc">There are many variations of passages of Lorem Ipsum
+												available</p>
+											<p class="box-price">$30 /person</p>
+										</div>
+									</div>
+									<div class="col-6 col-md-3 item">
+										<div class="box-service">
+											<div class="box-service-icon">
+												<img src="images/noun-people.svg" alt="">
+											</div>
+											<h6 class="box-title">Photography </h6>
+											<p class="box-desc">There are many variations of passages of Lorem Ipsum
+												available</p>
+											<p class="box-price">$30 /person</p>
+										</div>
+									</div>
+									<div class="col-6 col-md-3 item">
+										<div class="box-service">
+											<div class="box-service-icon">
+												<img src="images/noun-childcare.svg" alt="">
+											</div>
+											<h6 class="box-title">Childcare services</h6>
+											<p class="box-desc">There are many variations of passages of Lorem Ipsum
+												available</p>
+											<p class="box-price">$10 /person</p>
+										</div>
+									</div>
+									<div class="col-6 col-md-3 item">
+										<div class="box-service">
+											<div class="box-service-icon">
+												<img src="images/noun-childcare.svg" alt="">
+											</div>
+											<h6 class="box-title">Childcare services</h6>
+											<p class="box-desc">There are many variations of passages of Lorem Ipsum
+												available</p>
+											<p class="box-price">$10 /person</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-single">
+							<h2 class="box-title">Customer reviews</h2>
+							<div class="box-reviews">
+								<div class="box-ratting">
+									<h6 class="box-reviews-title">Overall rating</h6>
+									<div class="box-ratting-star">
+										<span><img src="images/star.svg" alt=""></span>
+										<span><span class="box-ratting-total">4.4</span>/5</span>
+									</div>
+									<p class="number-review">(123 reviews)</p>
+								</div>
+								<div class="box-summary">
+									<h6 class="box-reviews-title">Review summary</h6>
+									<div class="list-summary">
+										<div class="summary-item">
+											<p class="summary-item-text"><span>Guide</span> <span>4.9/5</span></p>
+											<div class="summary-item-rate">
+												<div class="summary-item-rate-active"></div>
+											</div>
+										</div>
+										<div class="summary-item">
+											<p class="summary-item-text"><span>Service</span> <span>4.9/5</span></p>
+											<div class="summary-item-rate">
+												<div class="summary-item-rate-active"></div>
+											</div>
+										</div>
+										<div class="summary-item">
+											<p class="summary-item-text"><span>Transportation</span> <span>4.5/5</span>
+											</p>
+											<div class="summary-item-rate">
+												<div class="summary-item-rate-active rate-8"></div>
+											</div>
+										</div>
+										<div class="summary-item">
+											<p class="summary-item-text"><span>Organization</span> <span>4.5/5</span>
+											</p>
+											<div class="summary-item-rate">
+												<div class="summary-item-rate-active rate-8"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-reviews">
+								<div class="reviews-item">
+									<div class="review-info">
+										<div class="atatar">
+											<img src="images/avta1.png" alt="">
+										</div>
+										<div class="meta">
+											<p class="name">Kevin Lee</p>
+											<p class="date">On Nov 20, 2024</p>
+										</div>
+									</div>
+									<div class="statr-rate">
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+									</div>
+									<div class="box-comment">
+										<p>This was an experience to remember. It was solely and achievement thanks to
+											our guide Durga! We definitely would not have survived without his help. I
+											would definitely recommend reading up about the trek prior to be fully
+											prepared for what is coming... Read more.</p>
+									</div>
+								</div>
+								<div class="reviews-item">
+									<div class="review-info">
+										<div class="atatar">
+											<img src="images/avta2.png" alt="">
+										</div>
+										<div class="meta">
+											<p class="name">Kevin Lee</p>
+											<p class="date">On Nov 20, 2024</p>
+										</div>
+									</div>
+									<div class="statr-rate">
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+									</div>
+									<div class="box-comment">
+										<p>This was an experience to remember. It was solely and achievement thanks to
+											our guide Durga! We definitely would not have survived without his help. I
+											would definitely recommend reading up about the trek prior to be fully
+											prepared for what is coming... Read more.</p>
+									</div>
+								</div>
+								<div class="reviews-item">
+									<div class="review-info">
+										<div class="atatar">
+											<img src="images/avta1.png" alt="">
+										</div>
+										<div class="meta">
+											<p class="name">Kevin Lee</p>
+											<p class="date">On Nov 20, 2024</p>
+										</div>
+									</div>
+									<div class="statr-rate">
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+										<span><img src="images/star2.svg" alt=""></span>
+									</div>
+									<div class="box-comment">
+										<p>This was an experience to remember. It was solely and achievement thanks to
+											our guide Durga! We definitely would not have survived without his help. I
+											would definitely recommend reading up about the trek prior to be fully
+											prepared for what is coming... Read more.</p>
+									</div>
+								</div>
+								<a href="" class="btn-pencil-review"><img src="images/pencil.svg" alt=""> Leave a
+									review</a>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="list-box-cart">
@@ -729,7 +1270,7 @@
 								</div>
 								<form action="" class="form-cart">
 									<div class="box-field">
-										<label for="formdate" class="btn-inp">
+										<label for="datepicker" class="btn-inp openCalendar" id="openCalendar">
 											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
 												viewBox="0 0 22 22" fill="none">
 												<path
@@ -744,9 +1285,9 @@
 													stroke-linecap="round" stroke-linejoin="round" />
 											</svg>
 											<span>Date</span>
-											<input type="date" name="formdate" id="formdate" hidden>
+											<input type="text" id="hiddenDate" name="formdate" hidden>
 										</label>
-										<label for="formguest" class="btn-inp">
+										<label for="formguest" class="btn-inp formguest">
 											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
 												viewBox="0 0 22 22" fill="none">
 												<path
@@ -757,6 +1298,36 @@
 											<span>Guest</span>
 											<input type="text" name="formguest" id="formguest" hidden>
 										</label>
+										<div class="box-formguest">
+											<p class="note">You can select up to 12 travelers in total.</p>
+											<div class="box-list-ques">
+												<div class="box-formguest-item">
+													<div class="text">
+														<span>Adult</span>
+														<br>
+														<span>Age 13+</span>
+													</div>
+													<div class="form-input">
+														<span class="minus">-</span>
+														<input type="number" name="adult" value="0">
+														<span class="plus">+</span>
+													</div>
+												</div>
+												<div class="box-formguest-item">
+													<div class="text">
+														<span>Children</span>
+														<br>
+														<span>Age 3 - 12</span>
+													</div>
+													<div class="form-input">
+														<span class="minus">-</span>
+														<input type="number" name="children" value="0">
+														<span class="plus">+</span>
+													</div>
+												</div>
+											</div>
+											<a href="" class="btn-apply-guest">Apply</a>
+										</div>
 									</div>
 									<div class="form-cta">
 										<a href="" class="btn-form">Check availability</a>
@@ -765,11 +1336,182 @@
 								</form>
 							</div>
 							<div class="box-cart">
+								<div class="cart-meta-top">
+									<span class="cart-title">
+										From
+									</span>
+									<span class="cart-discount">-10%</span>
+								</div>
+								<div class="cart-meta-price">
+									<span class="sale-price">$450</span>
+									<span class="regular-price">$350</span>
+								</div>
+								<form action="" class="form-cart send-booking">
+									<nav>
+										<div class="nav nav-tabs" id="nav-tab" role="tablist">
+											<button class="nav-link active" id="nav-book-tab" data-toggle="tab"
+												data-target="#nav-book" type="button" role="tab"
+												aria-controls="nav-book" aria-selected="true">Book</button>
+											<button class="nav-link" id="nav-enquiry-tab" data-toggle="tab"
+												data-target="#nav-enquiry" type="button" role="tab"
+												aria-controls="nav-enquiry" aria-selected="false">Enquiry</button>
+										</div>
+									</nav>
+									<div class="tab-content" id="nav-tabContent">
+										<div class="tab-pane fade show active" id="nav-book" role="tabpanel"
+											aria-labelledby="nav-book-tab">
+											<div class="box-formguest-item">
+												<div class="text">
+													<span>Date</span>
+												</div>
+												<div class="form-input">
+													<span>26/6/2024</span>
+												</div>
+											</div>
+											<div class="box-formguest-item">
+												<div class="text">
+													<span>Adult (>13+)</span>
+												</div>
+												<div class="form-input">
+													<span class="minus">-</span>
+													<input type="number" name="adult" value="0">
+													<span class="plus">+</span>
+												</div>
+											</div>
+											<div class="box-formguest-item">
+												<div class="text">
+													<span>Children (3 - 12)</span>
+												</div>
+												<div class="form-input">
+													<span class="minus">-</span>
+													<input type="number" name="children" value="0">
+													<span class="plus">+</span>
+												</div>
+											</div>
+											<div class="box-formguest-item">
+												<div class="text">
+													<span>Infants (0 - 2)</span>
+												</div>
+												<div class="form-input">
+													<span class="minus">-</span>
+													<input type="number" name="infants" value="0">
+													<span class="plus">+</span>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="nav-enquiry" role="tabpanel"
+											aria-labelledby="nav-enquiry-tab">
+											<div class="box-formguest-item">
+												<div class="text">
+													<span>Date</span>
+												</div>
+												<div class="form-input">
+													<span>26/6/2024</span>
+												</div>
+											</div>
+											<div class="box-formguest-item">
+												<div class="text">
+													<span>Adult (>13+)</span>
+												</div>
+												<div class="form-input">
+													<span class="minus">-</span>
+													<input type="number" name="adult" value="0">
+													<span class="plus">+</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-cta">
+										<a href="" class="btn-form">Book now</a>
+									</div>
+								</form>
+							</div>
+							<div class="box-cart">
+								<div class="cart-meta-top">
+									<span class="cart-title">
+										From
+									</span>
+									<span class="cart-discount">-10%</span>
+								</div>
+								<div class="cart-meta-price">
+									<span class="sale-price">$450</span>
+									<span class="regular-price">$350</span>
+									<span>/person</span>
+								</div>
+								<div class="cart-meta-note">
+									<span>Have a question before booking? Message us to learn more.</span>
+								</div>
+								<form action="" class="form-cart send-question">
+									<div class="form-row">
+										<div class="col-6">
+											<input type="text" class="form-control" name="firstname"
+												placeholder="First name *" required>
+										</div>
+										<div class="col-6">
+											<input type="text" class="form-control" name="lastname"
+												placeholder="Last name">
+										</div>
+										<div class="col-12">
+											<input type="email" class="form-control" name="email" placeholder="Email *"
+												required>
+										</div>
+										<div class="col-12">
+											<input type="text" class="form-control" name="phone" placeholder="Phone *"
+												required>
+										</div>
+										<div class="col-12">
+											<textarea name="note" class="form-control" id="" required
+												placeholder="Your question *" rows="4"></textarea>
+										</div>
+									</div>
+									<div class="form-cta">
+										<a href="" class="btn-form">Send message</a>
+									</div>
+								</form>
+							</div>
+							<div class="box-cart">
+								<div class="cart-meta-top">
+									<span class="cart-title">
+										From
+									</span>
+									<span class="cart-discount">-10%</span>
+								</div>
+								<div class="cart-meta-price">
+									<span class="sale-price">$450</span>
+									<span class="regular-price">$350</span>
+									<span>/person</span>
+								</div>
+								<form action="" class="form-cart">
+									<div class="form-cta">
+										<a href="" class="btn-form btn-book">Book now
+											<span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+													viewBox="0 0 22 22" fill="none">
+													<path
+														d="M9.16667 2.75586C6.46638 2.78523 4.95943 2.95673 3.95818 3.95797C2.75 5.16616 2.75 7.1107 2.75 10.9998C2.75 14.8889 2.75 16.8334 3.95818 18.0416C5.16637 19.2498 7.11091 19.2498 11 19.2498C14.8891 19.2498 16.8336 19.2498 18.0418 18.0416C19.0146 17.0689 19.2041 15.6188 19.2411 13.0608"
+														stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M19.25 2.75H13.0625M19.25 2.75V8.9375M19.25 2.75L11.6875 10.3125"
+														stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+										<a href="" class="btn-form">Make enquiry</a>
+									</div>
+								</form>
+							</div>
+							<div class="box-cart">
 								<p class="box-cat-plan">Why booking with Togo?</p>
-								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Free cancellation up to 24 hours</p>
-								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Trusted by 100K+ travelers</p>
-								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Get the lowest prices</p>
-								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">24-hour support</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Free
+									cancellation up to 24 hours</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Trusted by
+									100K+ travelers</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">Get the
+									lowest prices</p>
+								<p class="box-cat-plan-item check"><img src="images/check-circle.svg" alt="">24-hour
+									support</p>
 							</div>
 							<div class="box-cart">
 								<p class="box-cat-plan">Plan your adventure</p>
@@ -784,6 +1526,222 @@
 					</div>
 				</div>
 			</div>
+			<section class="tours-releated">
+				<div class="container">
+					<div class="box-title">
+						<div class="box-content">
+							<h2 class="section-title">You might also like...</h2>
+						</div>
+					</div>
+					<div class="row list-tours">
+						<div class="col-12 col-sm-4 col-md-4 col-lg-3 item">
+							<div class="post post-tour">
+								<div class="trip-wishlist">
+									<div class="togo-tooltip">
+										<span class="togo-svg-icon "><svg aria-hidden="true" role="img"
+												focusable="false" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M7.75 3.5C5.12665 3.5 3 5.75956 3 8.54688C3 14.125 12 20.5 12 20.5C12 20.5 21 14.125 21 8.54688C21 5.09375 18.8734 3.5 16.25 3.5C14.39 3.5 12.7796 4.63593 12 6.2905C11.2204 4.63593 9.61003 3.5 7.75 3.5Z"
+													stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round"></path>
+											</svg></span>
+										<div class="togo-tooltip-content">
+											<p>Login to use</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-seller">
+									<div class="togo-tooltip">
+										<span class="togo-svg-icon "><svg xmlns="http://www.w3.org/2000/svg" width="16"
+												height="16" viewBox="0 0 16 16" fill="none">
+												<path
+													d="M8.49798 2.38121C8.53714 2.04614 8.14344 1.86336 7.94131 2.12277L2.73991 8.79801C2.56828 9.01827 2.71473 9.35266 2.98282 9.35266H7.64116C7.83136 9.35266 7.97851 9.53094 7.95492 9.73277L7.50072 13.6188C7.46156 13.9539 7.85526 14.1366 8.05739 13.8772L13.2588 7.20199C13.4304 6.98173 13.284 6.64734 13.0159 6.64734H8.35754C8.16734 6.64734 8.02019 6.46906 8.04378 6.26723L8.49798 2.38121Z"
+													stroke="#111111" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>Best seller</span>
+										<div class="togo-tooltip-content">
+											<p>Best seller</p>
+										</div>
+									</div>
+								</div>
+								<a href="" class="post-thumbnail">
+									<img src="images/tour1.jpg" alt="">
+								</a>
+								<div class="post-content">
+									<p class="post-cate">
+										<a href="" class="post-cate-item">City trip</a>
+										<a href="" class="post-cate-item">Paris</a>
+									</p>
+									<h3 class="post-title"><a href="">Two Hour Walking Tour of Manhattan</a></h3>
+									<p class="post-info">
+										<span class="post-rate"><img src="images/topo/star.png" alt=""> 4.5
+											<span>(123)</span>
+										</span>
+										<span><img src="images/topo/clock-seven.png" alt="">8 days</span>
+									</p>
+									<div class="post-meta">
+										<p class="post-price">from &nbsp; <span>$499</span>&nbsp; /person</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4 col-md-4 col-lg-3 item">
+							<div class="post post-tour">
+								<div class="trip-wishlist">
+									<div class="togo-tooltip">
+										<span class="togo-svg-icon "><svg aria-hidden="true" role="img"
+												focusable="false" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M7.75 3.5C5.12665 3.5 3 5.75956 3 8.54688C3 14.125 12 20.5 12 20.5C12 20.5 21 14.125 21 8.54688C21 5.09375 18.8734 3.5 16.25 3.5C14.39 3.5 12.7796 4.63593 12 6.2905C11.2204 4.63593 9.61003 3.5 7.75 3.5Z"
+													stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round"></path>
+											</svg></span>
+										<div class="togo-tooltip-content">
+											<p>Login to use</p>
+										</div>
+									</div>
+								</div>
+								<a href="" class="post-thumbnail">
+									<img src="images/tour2.jpg" alt="">
+								</a>
+								<div class="post-content">
+									<p class="post-cate">
+										<a href="" class="post-cate-item">Group tour</a>
+										<a href="" class="post-cate-item">San Francisco</a>
+									</p>
+									<h3 class="post-title"><a href="">Los Angeles to San Francisco Express</a></h3>
+									<p class="post-info">
+										<span class="post-rate"><img src="images/topo/star.png" alt=""> 5.0
+											<span>(39)</span>
+										</span>
+										<span><img src="images/topo/clock-seven.png" alt="">2 days</span>
+									</p>
+									<div class="post-meta">
+										<p class="post-price">from &nbsp; <span>$353</span>&nbsp; /person</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4 col-md-4 col-lg-3 item">
+							<div class="post post-tour">
+								<div class="trip-wishlist">
+									<div class="togo-tooltip">
+										<span class="togo-svg-icon "><svg aria-hidden="true" role="img"
+												focusable="false" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M7.75 3.5C5.12665 3.5 3 5.75956 3 8.54688C3 14.125 12 20.5 12 20.5C12 20.5 21 14.125 21 8.54688C21 5.09375 18.8734 3.5 16.25 3.5C14.39 3.5 12.7796 4.63593 12 6.2905C11.2204 4.63593 9.61003 3.5 7.75 3.5Z"
+													stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round"></path>
+											</svg></span>
+										<div class="togo-tooltip-content">
+											<p>Login to use</p>
+										</div>
+									</div>
+								</div>
+
+								<a href="" class="post-thumbnail">
+									<img src="images/tour3.jpg" alt="">
+								</a>
+								<div class="post-content">
+									<p class="post-cate">
+										<a href="" class="post-cate-item">Day trip</a>
+										<a href="" class="post-cate-item">Yokohama</a>
+									</p>
+									<h3 class="post-title"><a href="">Yokohama Hakkeijima Sea Paradise Ticket</a></h3>
+									<p class="post-info">
+										<span class="post-rate"><img src="images/topo/star.png" alt=""> 4.5
+											<span>(73)</span>
+										</span>
+										<span><img src="images/topo/clock-seven.png" alt="">3 days</span>
+									</p>
+									<div class="post-meta">
+										<p class="post-price">from &nbsp; <span>$673</span>&nbsp; /person</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4 col-md-4 col-lg-3 item">
+							<div class="post post-tour">
+								<div class="trip-wishlist">
+									<div class="togo-tooltip">
+										<span class="togo-svg-icon "><svg aria-hidden="true" role="img"
+												focusable="false" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M7.75 3.5C5.12665 3.5 3 5.75956 3 8.54688C3 14.125 12 20.5 12 20.5C12 20.5 21 14.125 21 8.54688C21 5.09375 18.8734 3.5 16.25 3.5C14.39 3.5 12.7796 4.63593 12 6.2905C11.2204 4.63593 9.61003 3.5 7.75 3.5Z"
+													stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round"></path>
+											</svg></span>
+										<div class="togo-tooltip-content">
+											<p>Login to use</p>
+										</div>
+									</div>
+								</div>
+								<a href="" class="post-thumbnail">
+									<img src="images/tour4.jpg" alt="">
+								</a>
+								<div class="post-content">
+									<p class="post-cate">
+										<a href="" class="post-cate-item">City trip</a>
+										<a href="" class="post-cate-item">Bangkok</a>
+									</p>
+									<h3 class="post-title"><a href="">Thai Bus Food Tour Experience in Bangkok</a></h3>
+									<p class="post-info">
+										<span class="post-rate"><img src="images/topo/star.png" alt=""> 4.8
+											<span>(212)</span>
+										</span>
+										<span><img src="images/topo/clock-seven.png" alt="">2 days</span>
+									</p>
+									<div class="post-meta">
+										<p class="post-price">from &nbsp; <span>$1.236</span>&nbsp; /person</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4 col-md-4 col-lg-3 item">
+							<div class="post post-tour">
+								<div class="trip-wishlist">
+									<div class="togo-tooltip">
+										<span class="togo-svg-icon "><svg aria-hidden="true" role="img"
+												focusable="false" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M7.75 3.5C5.12665 3.5 3 5.75956 3 8.54688C3 14.125 12 20.5 12 20.5C12 20.5 21 14.125 21 8.54688C21 5.09375 18.8734 3.5 16.25 3.5C14.39 3.5 12.7796 4.63593 12 6.2905C11.2204 4.63593 9.61003 3.5 7.75 3.5Z"
+													stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+													stroke-linejoin="round"></path>
+											</svg></span>
+										<div class="togo-tooltip-content">
+											<p>Login to use</p>
+										</div>
+									</div>
+								</div>
+								<a href="" class="post-thumbnail">
+									<img src="images/tour4.jpg" alt="">
+								</a>
+								<div class="post-content">
+									<p class="post-cate">
+										<a href="" class="post-cate-item">City trip</a>
+										<a href="" class="post-cate-item">Bangkok</a>
+									</p>
+									<h3 class="post-title"><a href="">Thai Bus Food Tour Experience in Bangkok</a></h3>
+									<p class="post-info">
+										<span class="post-rate"><img src="images/topo/star.png" alt=""> 4.8
+											<span>(212)</span>
+										</span>
+										<span><img src="images/topo/clock-seven.png" alt="">2 days</span>
+									</p>
+									<div class="post-meta">
+										<p class="post-price">from &nbsp; <span>$1.236</span>&nbsp; /person</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</main>
 	<footer class="footer">
@@ -1074,6 +2032,7 @@
 	<script type="text/javascript" src="assets/slick-1.6.0/slick.min.js"></script>
 	<script type="text/javascript" src="assets/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
