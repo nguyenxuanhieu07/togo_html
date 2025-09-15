@@ -3386,6 +3386,25 @@ a:hover {
     border-bottom: none;
     margin-bottom: 24px;
 }
+.tab-scroll-mb{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    position: sticky;
+    top: 73px;
+    border: 1px solid #eee;
+    margin: 0 -15px;
+    z-index: 4;
+}
+.tab-scroll-mb a {
+    padding: 15px;
+    white-space: nowrap;
+    border-right: 1px solid #eeeeee;
+}
 @media (max-width: 1200px) {
     .page-single .tours-releated .slick-arrow.slick-next{
         right: 32px;
@@ -3446,9 +3465,14 @@ a:hover {
         left: 0;
         top: 47%;
     }
+    .tab-scroll-mb{
+        display: none;
+    }
 }
 @media (max-width: 767px) {
-    
+    .tab-scroll-mb{
+        display: flex;
+    }
     .gallery-gird-slide .item.slick-active {
         width: 100vw !important;
     }

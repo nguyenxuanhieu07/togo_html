@@ -405,7 +405,19 @@ jQuery(document).ready(function () {
             }
         });
     });
+    const lightbox=GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        autoplayVideos: true
+    });
+    $('.scroll-link').on('click',function(e) {
+        e.preventDefault();
+        const target=$(this).attr('href');
 
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 150
+        },600);
+    });
 });
 document.querySelectorAll('.formguest').forEach(function(el, index) {
     el.addEventListener('click', function(e) {
