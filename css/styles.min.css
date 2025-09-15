@@ -3387,7 +3387,7 @@ a:hover {
     margin-bottom: 24px;
 }
 .tab-scroll-mb{
-    display: flex;
+    display: none;
     overflow-x: scroll;
     overflow-y: hidden;
     background-color: #fff;
