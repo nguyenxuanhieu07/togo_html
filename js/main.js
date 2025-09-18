@@ -255,8 +255,8 @@ var slide_function = {
                 speed: 1000,
                 autoplay: false,
                 autoplaySpeed: 5000,
-                slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 infinite: true,
                 responsive: [
                     {
@@ -291,11 +291,11 @@ var slide_function = {
         if (slide.length > 0 && item_slide.length > 4) {
             slide.slick({
                 dots: false,
-                arrow: true,
+                arrow: false,
                 speed: 1000,
                 autoplay: false,
                 autoplaySpeed: 5000,
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
                 responsive: [
@@ -307,7 +307,7 @@ var slide_function = {
                             infinite: true,
                             dots: false,
                             centerMode: false,
-                            arrows: true,
+                            arrows: false,
                         },
                     },
                     {
@@ -318,7 +318,7 @@ var slide_function = {
                             infinite: true,
                             dots: false,
                             centerMode: false,
-                            arrows: true,
+                            arrows: false,
                         },
                     },
                     {

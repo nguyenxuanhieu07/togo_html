@@ -1817,7 +1817,24 @@ a:hover {
 .icon-menu {
     display: none;
 }
+.list-tours .slick-arrow{
+    display: none !important;
+}
+.list-tours .slick-track{
+    display: flex;
+}
 
+.list-tours .slick-track .item{
+    flex: 0 0 auto;
+    height: inherit;
+}
+#accordion-question .card-header .btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+#accordion-question .card-header:hover .btn{
+    color: rgb(253,70,33);
+} 
 @media (min-width:1440px) {
     .homepage .container {
         max-width: 1440px
@@ -2746,6 +2763,7 @@ a:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 20px;
 }
 .box-single .box-content.expanded {
   -webkit-line-clamp: unset;
@@ -2849,7 +2867,7 @@ a:hover {
     font-family: FontAwesome;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -5px;
     width: 22px;
     height: 22px;
     font-size: 22px;
@@ -3038,6 +3056,16 @@ a:hover {
 .list-reviews .reviews-item:not(:first-child){
     padding-top: 24px;
 }
+.list-reviews .reviews-item:nth-last-of-type(1){
+    border-bottom: none;
+    padding-bottom: 0;
+}
+#accordion-schedule .card-header .btn:focus{
+    box-shadow: none;
+}
+#accordion-schedule .card-header .btn::after{
+    top: 12px;
+}
 .box-comment p:last-child{
     margin-bottom: 0;
 }
@@ -3058,7 +3086,9 @@ a:hover {
     border-bottom: none;
     padding-bottom: 0;
 }
-
+.tours-releated .post-tour{
+    height: 100%;
+}
 .tours-releated{
     margin-top: 64px;
     border-top: 1px solid #EEEEEE;
@@ -3086,10 +3116,10 @@ a:hover {
 .tours-releated  .post-tour .post-price span{
     font-size: 18px;
 }
-.tours-releated .post-tour .post-info{
+/* .tours-releated .post-tour .post-info{
     column-gap: 0;
     margin-bottom: 36px;
-}
+} */
 .tours-releated  .post-cate{
     display: flex;
     column-gap: 20px;
@@ -3404,6 +3434,10 @@ a:hover {
     padding: 15px;
     white-space: nowrap;
     border-right: 1px solid #eeeeee;
+}
+.box-cart .box-cat-plan-item svg{
+    width: 24px;
+    color: #46E86A;
 }
 @media (max-width: 1200px) {
     .page-single .tours-releated .slick-arrow.slick-next{
