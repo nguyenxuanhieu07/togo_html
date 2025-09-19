@@ -3439,6 +3439,237 @@ a:hover {
     width: 24px;
     color: #46E86A;
 }
+.blog_single{
+    background: #fbfbfb;
+}
+.blog_single .page-single{
+    padding: 80px 0;
+}
+.blog_single .breadcrumb{
+    padding: 0;
+    background: #fbfbfb;
+}
+.blog_single .breadcrumb span,
+.blog_single .breadcrumb a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606873;
+}
+.blog_single .breadcrumb a:hover{
+    color: rgb(253,70,33);
+}
+.blog_single .breadcrumb .item:not(:first-child)::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: #dee4e7;
+    border-radius: 50%;
+    margin: 0 16px;
+    vertical-align: 1px;
+}
+.page-single .single-title{
+    font-family: "Outfit", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-top: 24px;
+    display: flex;
+}
+.page-entry-img,
+.page-entry-content{
+    margin-top: 30px;
+}
+.page-entry-content{
+    padding-bottom: 80px;
+    border-bottom: 1px solid #edf0f2;
+}
+.page-entry-content p{
+    margin-bottom: 20px;
+}
+.single-related-title{
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.post-single-related{
+    padding-top: 40px;
+}
+.post-related .post-thumbnail{
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: 246/172;
+}
+.post-related .post-cate{
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #838e9e;
+    letter-spacing: .12px;
+    display: inline-flex;
+}
+.post-related .post-title{
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-top: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.post-related .post-desc{
+    margin-top: 16px;
+    color: rgb(85, 85, 85);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.post-related .post-link{
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(253,70,33);
+    color: rgb(253,70,33);
+    font-size: 14px;
+    font-weight: 500;
+}
+.post-comments{
+    padding-top: 80px;
+    border-top: 1px solid #edf0f2;
+    margin-top: 40px;
+}
+.post-comments-title{
+    font-family: "Outfit", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.post-comments-note{
+    color: #757e8d;
+    margin-bottom: 32px;
+}
+.post-comments .input-text{
+     font-size: 16px;
+    color: #111111;
+    width: 100%;
+    outline: none;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 0 16px;
+    min-height: 42px;
+}
+.post-comments label {
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 12px;
+}
+.post-comments .form-check{
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 24px;
+}
+.post-comments .form-check-input {
+    position: relative;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20px;
+    width: 20px;
+    margin-top: 3px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 12px;
+    border: 1px solid #dee4e7;
+    background-color: #fff;
+    color: #565a5c;
+    border-radius: 5px;
+}
+.post-comments .btn-comment{
+    padding: 11px 24px;
+    background: #FD4621;
+    border: 1px solid #FD4621;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+.box-side-title{
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    line-height: 1.44;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 0;
+    letter-spacing: -0.192px;
+}
+.search-form{
+    position: relative;
+}
+.search-form .search-submit{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+.search-form .search-submit:hover{
+    background: #FD4621;
+    color: #fff;
+}
+.search-form input[type=text]{
+    font-size: 16px;
+    color: #111;
+    width: 100%;
+    outline: none;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 0 16px;
+    min-height: 42px;
+}
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #FD4621;
+}
+.box-side{
+    margin-bottom: 32px;
+    padding-left: 30px;
+}
+.box-side-list{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.box-side-list a{
+    color: #555555;
+    font-size: 16px;
+    font-weight: 500;
+}
+.box-side-list li:not(:last-child){
+    margin-bottom: 12px;
+}
+.box-side-text{
+    color: #555555;
+    font-size: 16px;
+}
+@media only screen and (min-width: 1200px) {
+    .blog_single .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 @media (max-width: 1200px) {
     .page-single .tours-releated .slick-arrow.slick-next{
         right: 32px;
@@ -3461,7 +3692,12 @@ a:hover {
     }
 }
 @media (max-width: 1024px) {
-
+    .post-comments-title{
+        font-size: 24px;
+    }
+    .box-side:first-child{
+        padding-top: 40px;
+    }
 
     .gallery-gird-1 {
         height: 340px;

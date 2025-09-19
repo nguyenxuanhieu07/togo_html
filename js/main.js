@@ -339,12 +339,14 @@ var slide_function = {
 }
 jQuery(document).ready(function () {
     slide_function.init();
-    document.querySelector('.box-readmore').addEventListener('click', function (e) {
-        e.preventDefault();
-        const box = document.querySelector('.box-content');
-        box.classList.toggle('expanded');
-        this.textContent = box.classList.contains('expanded') ? "Read less" : "Read more";
-    });
+    if(jQuery('.box-readmore').length>0){
+        document.querySelector('.box-readmore').addEventListener('click', function (e) {
+            e.preventDefault();
+            const box = document.querySelector('.box-content');
+            box.classList.toggle('expanded');
+            this.textContent = box.classList.contains('expanded') ? "Read less" : "Read more";
+        });
+    }
     $('.openCalendar').each(function (index) {
         var $input = $(this);
         var $hiddenInput = $input.siblings('.hiddenDate');
@@ -419,20 +421,22 @@ jQuery(document).ready(function () {
         },600);
     });
 });
-document.querySelectorAll('.formguest').forEach(function(el, index) {
-    el.addEventListener('click', function(e) {
-        e.stopPropagation();
-        let box = el.parentElement.querySelector('.box-formguest');
+if(jQuery('.formguest').length>0){
+    document.querySelectorAll('.formguest').forEach(function(el, index) {
+        el.addEventListener('click', function(e) {
+            e.stopPropagation();
+            let box = el.parentElement.querySelector('.box-formguest');
+            document.querySelectorAll('.box-formguest').forEach(function(b) {
+                b.classList.remove('show-gues');
+            });
+            box.classList.toggle('show-gues');
+        });
+    });
+    
+    document.addEventListener('click', function() {
         document.querySelectorAll('.box-formguest').forEach(function(b) {
             b.classList.remove('show-gues');
         });
-        box.classList.toggle('show-gues');
     });
-});
-
-document.addEventListener('click', function() {
-    document.querySelectorAll('.box-formguest').forEach(function(b) {
-        b.classList.remove('show-gues');
-    });
-});
+}
 
