@@ -3661,6 +3661,35 @@ a:hover {
     color: #555555;
     font-size: 16px;
 }
+.form-check input {
+  display: none;
+}
+.form-check .checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.form-check input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff; 
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.form-check input:checked + .checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
 @media only screen and (min-width: 1200px) {
     .blog_single .container {
         max-width: 1200px;

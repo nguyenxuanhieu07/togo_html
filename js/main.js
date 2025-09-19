@@ -339,6 +339,11 @@ var slide_function = {
 }
 jQuery(document).ready(function () {
     slide_function.init();
+    if(jQuery('.checkmark').length>0){
+        jQuery('.checkmark').on('click',function(){
+            jQuery(this).parent().find('.form-check-input').click();
+        });
+    }
     if(jQuery('.box-readmore').length>0){
         document.querySelector('.box-readmore').addEventListener('click', function (e) {
             e.preventDefault();
