@@ -3690,6 +3690,85 @@ a:hover {
   background-color: #007bff;
   border-color: #007bff;
 }
+.list-post-archive .post{
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+}
+.list-post-archive .post:not(:last-child){
+    margin-bottom: 60px;
+}
+.list-post-archive .post-thumbnail{
+    flex-shrink: 0;
+    width: 400px;
+    aspect-ratio: 400/280;
+    margin-bottom: 0;
+}
+.list-post-archive .post-cate{
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #838e9e;
+    letter-spacing: .12px;
+    display: inline-flex;
+}
+.list-post-archive .post-title{
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif
+}
+.list-post-archive .post-desc{
+    margin-top: 16px;
+}
+.list-post-archive .link-more{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgb(253,70,33);
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(253,70,33);
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75rem;
+    margin-top: 3.75rem;
+}
+.pagination .page-number{
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.pagination .page-number.active{
+    background: rgb(253,70,33);
+    color: #fff !important;
+}
+.pagination .page-number:hover{
+    border: 1px solid rgb(253,70,33);
+    color: rgb(253,70,33);
+}
+.pagination .page-next svg{
+    width: 20px;
+    height: 20px;
+}
+.pagination .page-next{
+    border: 1px solid #eeeeee;
+}
+.blog-archive .page-single{
+    padding: 40px 0;
+}
 @media only screen and (min-width: 1200px) {
     .blog_single .container {
         max-width: 1200px;
@@ -3832,6 +3911,15 @@ a:hover {
     }
     .litepicker .container__months{
         width: 100vw;
+    }
+    .list-post-archive .post{
+        flex-flow: column;
+        row-gap: 16px;
+        column-gap: 0;
+        align-items: flex-start;
+    }
+    .list-post-archive .post-thumbnail{
+        max-width: 100%;
     }
 }
 @media (max-width: 575px) {
