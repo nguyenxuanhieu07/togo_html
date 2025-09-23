@@ -1,173 +1,3 @@
-jQuery(document).ready(function ($) {
-    var btn_menu = jQuery('.btn-mb-menu');
-    if (btn_menu.length > 0) {
-        btn_menu.on('click', function () {
-            jQuery('.header-menu').toggleClass('show');
-            if (jQuery('.header-menu').hasClass('show')) {
-                jQuery(this).find('i').removeClass('fa-bars');
-                jQuery(this).find('i').addClass('fa-times');
-            } else {
-                jQuery(this).find('i').addClass('fa-bars');
-                jQuery(this).find('i').removeClass('fa-times');
-            }
-        });
-    }
-    $(window).on('scroll', function () {
-        if ($(this).scrollTop() > 100) {
-            $('.header').addClass('scrolled');
-        } else {
-            $('.header').removeClass('scrolled');
-        }
-    });
-    // topo
-
-    let $wrapper = $(".scrollLoop");
-    $wrapper.each(function () {
-        let $list = $(this).find('.loop-item');
-        $list.append($list.html());
-
-        let speed = 5000;
-        let left = 0;
-        let listWidth = $list.width() / 2;
-
-        function loop() {
-            left -= 1;
-            if (Math.abs(left) >= listWidth) {
-                left = 0;
-            }
-            $list.css("transform", `translateX(${left}px)`);
-        }
-
-        let timer = setInterval(loop, 1000 / speed);
-
-        $list.on("mouseenter", function () {
-            clearInterval(timer);
-        });
-
-        $list.on("mouseleave", function () {
-            timer = setInterval(loop, 1000 / speed);
-        });
-    });
-
-    var list_slide = $('.list-feedback'),
-        item = $('.list-feedback .inner');
-    if (list_slide.length > 0 && item.length > 1) {
-        list_slide.slick({
-            dots: false,
-            arrow: true,
-            speed: 1000,
-            autoplay: false,
-            autoplaySpeed: 5000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 575,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false,
-                        centerMode: false,
-                        arrows: false,
-                    },
-                },
-            ],
-        });
-    }
-    function animateCounter(element) {
-        const from = parseInt(element.getAttribute("data-from-value")) || 0;
-        const to = parseInt(element.getAttribute("data-to-value")) || 0;
-        const duration = parseInt(element.getAttribute("data-duration")) || 2000;
-
-        let startTime = null;
-
-        function updateCounter(currentTime) {
-            if (!startTime) startTime = currentTime;
-            const progress = Math.min((currentTime - startTime) / duration, 1);
-            let value = Math.floor(progress * (to - from) + from);
-            value = value.toLocaleString('en-US')
-            element.textContent = value;
-
-            if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-            }
-        }
-
-        requestAnimationFrame(updateCounter);
-    }
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    document.querySelectorAll(".counter-number").forEach(el => {
-        observer.observe(el);
-    });
-    const observerAnimation = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                // Nếu chỉ muốn chạy 1 lần:
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll('.togo-fade-in-left').forEach(el => {
-        observerAnimation.observe(el);
-    });
-    document.querySelectorAll('.togo-fade-in-right').forEach(el => {
-        observerAnimation.observe(el);
-    });
-    document.querySelectorAll('.togo-fade-in-up').forEach(el => {
-        observerAnimation.observe(el);
-    });
-    document.querySelectorAll('.togo-fade-in-down').forEach(el => {
-        observerAnimation.observe(el);
-    });
-    jQuery('.header .nav-item').on('show.bs.dropdown', function () {
-        if (jQuery(window).width() < 768) {
-            jQuery('.header .navbar-nav').css({ transform: 'translateX(-100%)' })
-        }
-    })
-    jQuery('.mobie-menu-back').on('click', function () {
-        jQuery('.header .navbar-nav').css({ transform: 'translateX(0)' })
-    })
-    jQuery('.btn-mb-menu').on('click', function () {
-        jQuery('.header').addClass('is-active');
-    })
-    jQuery('.mobile-menu-close').on('click', function () {
-        jQuery('.header').removeClass('is-active');
-        jQuery('.header-menu').removeClass('show');
-        jQuery('.header .navbar-nav').css({ transform: 'translateX(0)' });
-        jQuery('.btn-mb-menu i').addClass('fa-bars').removeClass('fa-times')
-    })
-    jQuery('.img-overlay').on('click', function () {
-        jQuery('.dialog-light-box').fadeIn("slow")
-        jQuery('#video-intro').html(`
-            <iframe
-        src="https://www.youtube.com/embed/XHOmBV4js_E?feature=oembed&start&end&wmode=opaque&loop=0&controls=0&mute=0&rel=0&cc_load_policy=0"
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-        </iframe>`)
-    });
-    jQuery('.dialog-close-button').on('click', function (e) {
-        console.log('cccc');
-        e.preventDefault();
-        jQuery('.dialog-light-box').fadeOut("slow")
-    })
-    jQuery('.footer-title').on('click', function () {
-        jQuery(this).toggleClass('show');
-        var sub = jQuery(this).parent().find('.footer-menu').toggleClass('show')
-    })
-});
-
 var slide_function = {
     init: function () {
         slide_function.gallery_slide();
@@ -337,15 +167,260 @@ var slide_function = {
         }
     }
 }
-jQuery(document).ready(function () {
-    slide_function.init();
-    if(jQuery('.checkmark').length>0){
-        jQuery('.checkmark').on('click',function(){
-            jQuery(this).parent().find('.form-check-input').click();
+jQuery(document).ready(function ($) {
+    var btn_menu = jQuery('.btn-mb-menu');
+    if (btn_menu.length > 0) {
+        btn_menu.on('click', function () {
+            jQuery('.header-menu').toggleClass('show');
+            if (jQuery('.header-menu').hasClass('show')) {
+                jQuery(this).find('i').removeClass('fa-bars');
+                jQuery(this).find('i').addClass('fa-times');
+            } else {
+                jQuery(this).find('i').addClass('fa-bars');
+                jQuery(this).find('i').removeClass('fa-times');
+            }
         });
     }
-    if(jQuery('.box-readmore').length>0){
-        document.querySelector('.box-readmore').addEventListener('click', function (e) {
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 100) {
+            $('.header').addClass('scrolled');
+        } else {
+            $('.header').removeClass('scrolled');
+        }
+    });
+    // topo
+
+    let $wrapper = $(".scrollLoop");
+    $wrapper.each(function () {
+        let $list = $(this).find('.loop-item');
+        $list.append($list.html());
+
+        let speed = 5000;
+        let left = 0;
+        let listWidth = $list.width() / 2;
+
+        function loop() {
+            left -= 1;
+            if (Math.abs(left) >= listWidth) {
+                left = 0;
+            }
+            $list.css("transform", `translateX(${left}px)`);
+        }
+
+        let timer = setInterval(loop, 1000 / speed);
+
+        $list.on("mouseenter", function () {
+            clearInterval(timer);
+        });
+
+        $list.on("mouseleave", function () {
+            timer = setInterval(loop, 1000 / speed);
+        });
+    });
+
+    var list_slide = $('.list-feedback'),
+        item = $('.list-feedback .inner');
+    if (list_slide.length > 0 && item.length > 1) {
+        list_slide.slick({
+            dots: false,
+            arrow: true,
+            speed: 1000,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false,
+                        centerMode: false,
+                        arrows: false,
+                    },
+                },
+            ],
+        });
+    }
+    function animateCounter(element) {
+        const from = parseInt(element.getAttribute("data-from-value")) || 0;
+        const to = parseInt(element.getAttribute("data-to-value")) || 0;
+        const duration = parseInt(element.getAttribute("data-duration")) || 2000;
+
+        let startTime = null;
+
+        function updateCounter(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            let value = Math.floor(progress * (to - from) + from);
+            value = value.toLocaleString('en-US')
+            element.textContent = value;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            }
+        }
+
+        requestAnimationFrame(updateCounter);
+    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll(".counter-number").forEach(el => {
+        observer.observe(el);
+    });
+    const observerAnimation = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                // Nếu chỉ muốn chạy 1 lần:
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.togo-fade-in-left').forEach(el => {
+        observerAnimation.observe(el);
+    });
+    document.querySelectorAll('.togo-fade-in-right').forEach(el => {
+        observerAnimation.observe(el);
+    });
+    document.querySelectorAll('.togo-fade-in-up').forEach(el => {
+        observerAnimation.observe(el);
+    });
+    document.querySelectorAll('.togo-fade-in-down').forEach(el => {
+        observerAnimation.observe(el);
+    });
+    jQuery('.header .nav-item').on('show.bs.dropdown', function () {
+        if (jQuery(window).width() < 768) {
+            jQuery('.header .navbar-nav').css({ transform: 'translateX(-100%)' })
+        }
+    })
+    jQuery('.mobie-menu-back').on('click', function () {
+        jQuery('.header .navbar-nav').css({ transform: 'translateX(0)' })
+    })
+    jQuery('.btn-mb-menu').on('click', function () {
+        jQuery('.header').addClass('is-active');
+    })
+    jQuery('.mobile-menu-close').on('click', function () {
+        jQuery('.header').removeClass('is-active');
+        jQuery('.header-menu').removeClass('show');
+        jQuery('.header .navbar-nav').css({ transform: 'translateX(0)' });
+        jQuery('.btn-mb-menu i').addClass('fa-bars').removeClass('fa-times')
+    })
+    jQuery('.img-overlay').on('click', function () {
+        jQuery('.dialog-light-box').fadeIn("slow")
+        jQuery('#video-intro').html(`
+            <iframe
+        src="https://www.youtube.com/embed/XHOmBV4js_E?feature=oembed&start&end&wmode=opaque&loop=0&controls=0&mute=0&rel=0&cc_load_policy=0"
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>`)
+    });
+    jQuery('.dialog-close-button').on('click', function (e) {
+        console.log('cccc');
+        e.preventDefault();
+        jQuery('.dialog-light-box').fadeOut("slow")
+    })
+    jQuery('.footer-title').on('click', function () {
+        jQuery(this).toggleClass('show');
+        var sub = jQuery(this).parent().find('.footer-menu').toggleClass('show')
+    });
+    jQuery('.filter-item__top').on('click', function(){
+        var parent = jQuery(this).parents('.filter-item');
+        parent.toggleClass('active');
+        var content = parent.find('.filter-item__content');
+        content.stop(true, true).slideToggle(800);
+    });
+    jQuery('.show-more').on('click', function(e){
+        e.preventDefault();
+        var parent = jQuery(this).parents('.filter-item');
+        console.log(parent)
+        console.log(parent.find('.filter-checkbox'));
+        parent.find('.filter-checkbox.hide').toggleClass('show')
+    });
+    let tours_content = jQuery('.tours-content').length;
+    if(tours_content > 0){
+        const rangeSlider = document.querySelector('.range-slider');
+        const minInput = rangeSlider.querySelector('input[name="min_price"]');
+        const maxInput = rangeSlider.querySelector('input[name="max_price"]');
+        const inclRange = rangeSlider.querySelector('.incl-range');
+
+        function updateRange() {
+            let min = parseInt(jQuery('input[name="min_price"]').val());
+            let max = parseInt(jQuery('input[name="max_price"]').val());
+            let rangeMin = parseInt(jQuery('input[name="min_price"]').attr("min"));
+            let rangeMax = parseInt(jQuery('input[name="min_price"]').attr("max"));
+            console.log("min", min);
+            console.log("max", max);
+            let left = ((min - rangeMin) / (rangeMax - rangeMin)) * 100;
+            let right = ((max - rangeMin) / (rangeMax - rangeMin)) * 100;
+
+            inclRange.style.left = left + "%";
+            inclRange.style.width = (right - left) + "%";
+            jQuery('.incl-range').css({
+                left: left + "%",
+                width: (right - left) + "%"
+            })
+        }
+        jQuery('input[name="min_price"]').on('change', function(){
+            var val = jQuery(this).val();
+            jQuery('input[name="min_price"]').val(val);
+            updateRange();
+        })
+        jQuery('input[name="max_price"]').on('change', function(){
+            var val = jQuery(this).val();
+            jQuery('input[name="max_price"]').val(val);
+            updateRange();
+        })
+        // [minInput, maxInput].forEach(input => {
+        //     input.addEventListener("input", updateRange);
+        // });
+
+        updateRange();
+    }
+    jQuery('.togo-select').on('click', function(){
+        jQuery('.togo-select__content').toggle();
+    });
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.togo-select').length) {
+            $('.togo-select__content').hide();
+        }
+    });
+    $('.trip-video').hover(
+        function() {
+            $(this).addClass('playing');
+            $(this).find('video').get(0).play();
+        },
+        function() {
+            $(this).removeClass('playing');
+            $(this).find('video').get(0).pause();
+        }
+    );
+    jQuery('.open-filter-canvas').on('click', function(){
+        jQuery('.filter-canvas-wrapper').addClass('open');
+        jQuery('.layout-canvas').addClass('open')
+    });
+    jQuery('.filter-canvas-overlay').on('click', function(){
+        jQuery('.filter-canvas-wrapper').removeClass('open');
+        jQuery('.layout-canvas').removeClass('open')
+    });
+    if(slide_function){
+        slide_function.init();
+    }
+    
+    const boxReadMore= document.querySelector('.box-readmore');
+    if(boxReadMore){
+        boxReadMore.addEventListener('click', function (e) {
             e.preventDefault();
             const box = document.querySelector('.box-content');
             box.classList.toggle('expanded');
@@ -355,10 +430,8 @@ jQuery(document).ready(function () {
     $('.openCalendar').each(function (index) {
         var $input = $(this);
         var $hiddenInput = $input.siblings('.hiddenDate');
-        var $displayText = $input.siblings('.selectedDateText');
-
+        var $displayText = $input.find('.selectedDateText');
         var isMobile = $(window).width() < 768;
-
         new Litepicker({
             element: this,
             singleMode: true,
@@ -378,9 +451,10 @@ jQuery(document).ready(function () {
                 });
 
                 picker.on('selected', function (date) {
-                    var value = date.format('YYYY-MM-DD');
+                    
+                    var value = date.format('MMM DD, YYYY');
                     $hiddenInput.val(value);
-                    $displayText.text('Ngày đã chọn: ' + value);
+                    $displayText.text(value);
                 });
             }
         });
