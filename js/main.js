@@ -499,6 +499,10 @@ jQuery(document).ready(function ($) {
             scrollTop: $(target).offset().top - 150
         },600);
     });
+    jQuery(document).on('click','.show-cart',function(){
+        jQuery('.box-content-cart').toggleClass('show');
+        return false;
+    });
 });
 if(jQuery('.formguest').length>0){
     document.querySelectorAll('.formguest').forEach(function(el, index) {
