@@ -198,7 +198,7 @@ jQuery(document).ready(function ($) {
         let speed = 5000;
         let left = 0;
         let listWidth = $list.width() / 2;
-    
+
         function loop() {
             left -= 1;
             if (Math.abs(left) >= listWidth) {
@@ -206,13 +206,13 @@ jQuery(document).ready(function ($) {
             }
             $list.css("transform", `translateX(${left}px)`);
         }
-    
+
         let timer = setInterval(loop, 1000 / speed);
-    
+
         $list.on("mouseenter", function () {
             clearInterval(timer);
         });
-    
+
         $list.on("mouseleave", function () {
             timer = setInterval(loop, 1000 / speed);
         });
@@ -259,7 +259,7 @@ jQuery(document).ready(function ($) {
             element.textContent = value;
 
             if (progress < 1) {
-            requestAnimationFrame(updateCounter);
+                requestAnimationFrame(updateCounter);
             }
         }
 
@@ -268,8 +268,8 @@ jQuery(document).ready(function ($) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            observer.unobserve(entry.target);
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
@@ -279,12 +279,12 @@ jQuery(document).ready(function ($) {
     const observerAnimation = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-            // Nếu chỉ muốn chạy 1 lần:
-            observer.unobserve(entry.target);
+                entry.target.classList.add("animate");
+                // Nếu chỉ muốn chạy 1 lần:
+                observer.unobserve(entry.target);
             }
         });
-        }, { threshold: 0.3 });
+    }, { threshold: 0.3 });
 
     document.querySelectorAll('.togo-fade-in-left').forEach(el => {
         observerAnimation.observe(el);
@@ -298,24 +298,24 @@ jQuery(document).ready(function ($) {
     document.querySelectorAll('.togo-fade-in-down').forEach(el => {
         observerAnimation.observe(el);
     });
-    jQuery('.header .nav-item').on('show.bs.dropdown', function(){
-        if(jQuery(window).width() < 768){
-            jQuery('.header .navbar-nav').css({transform: 'translateX(-100%)'})
+    jQuery('.header .nav-item').on('show.bs.dropdown', function () {
+        if (jQuery(window).width() < 768) {
+            jQuery('.header .navbar-nav').css({ transform: 'translateX(-100%)' })
         }
     })
-    jQuery('.mobie-menu-back').on('click', function(){
-        jQuery('.header .navbar-nav').css({transform: 'translateX(0)'})
+    jQuery('.mobie-menu-back').on('click', function () {
+        jQuery('.header .navbar-nav').css({ transform: 'translateX(0)' })
     })
-    jQuery('.btn-mb-menu').on('click', function(){
+    jQuery('.btn-mb-menu').on('click', function () {
         jQuery('.header').addClass('is-active');
     })
-    jQuery('.mobile-menu-close').on('click', function(){
+    jQuery('.mobile-menu-close').on('click', function () {
         jQuery('.header').removeClass('is-active');
         jQuery('.header-menu').removeClass('show');
-        jQuery('.header .navbar-nav').css({transform: 'translateX(0)'});
+        jQuery('.header .navbar-nav').css({ transform: 'translateX(0)' });
         jQuery('.btn-mb-menu i').addClass('fa-bars').removeClass('fa-times')
     })
-    jQuery('.img-overlay').on('click', function(){
+    jQuery('.img-overlay').on('click', function () {
         jQuery('.dialog-light-box').fadeIn("slow")
         jQuery('#video-intro').html(`
             <iframe
@@ -326,12 +326,12 @@ jQuery(document).ready(function ($) {
         allowfullscreen>
         </iframe>`)
     });
-    jQuery('.dialog-close-button').on('click', function(e){
+    jQuery('.dialog-close-button').on('click', function (e) {
         console.log('cccc');
         e.preventDefault();
         jQuery('.dialog-light-box').fadeOut("slow")
     })
-    jQuery('.footer-title').on('click', function(){
+    jQuery('.footer-title').on('click', function () {
         jQuery(this).toggleClass('show');
         var sub = jQuery(this).parent().find('.footer-menu').toggleClass('show')
     });
@@ -432,7 +432,6 @@ jQuery(document).ready(function ($) {
         var $hiddenInput = $input.siblings('.hiddenDate');
         var $displayText = $input.find('.selectedDateText');
         var isMobile = $(window).width() < 768;
-        console.log('cccc')
         new Litepicker({
             element: this,
             singleMode: true,
@@ -500,28 +499,23 @@ jQuery(document).ready(function ($) {
             scrollTop: $(target).offset().top - 150
         },600);
     });
-    flatpickr("#daterange", {
-        mode: "range",          // chọn khoảng ngày
-        dateFormat: "d-m-Y",    // format ngày
-        plugins: [ new confirmDatePlugin({ confirmText: "Apply" }) ],
-        showMonths: 2           // hiển thị 2 tháng cạnh nhau
-    });
 });
-
-
-document.querySelectorAll('.formguest').forEach(function(el, index) {
-    el.addEventListener('click', function(e) {
-        e.stopPropagation();
-        let box = el.parentElement.querySelector('.box-formguest');
+if(jQuery('.formguest').length>0){
+    document.querySelectorAll('.formguest').forEach(function(el, index) {
+        el.addEventListener('click', function(e) {
+            e.stopPropagation();
+            let box = el.parentElement.querySelector('.box-formguest');
+            document.querySelectorAll('.box-formguest').forEach(function(b) {
+                b.classList.remove('show-gues');
+            });
+            box.classList.toggle('show-gues');
+        });
+    });
+    
+    document.addEventListener('click', function() {
         document.querySelectorAll('.box-formguest').forEach(function(b) {
             b.classList.remove('show-gues');
         });
-        box.classList.toggle('show-gues');
     });
-});
+}
 
-document.addEventListener('click', function() {
-    document.querySelectorAll('.box-formguest').forEach(function(b) {
-        b.classList.remove('show-gues');
-    });
-});

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Togo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/slick-1.6.0/slick.css" />
+    <link rel="stylesheet" href="assets/slick-1.6.0/slick-theme.css" />
+    <link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<svg style="display: none;" class="e-font-icon-svg-symbols">
+    <symbol id="eicon-close" viewBox="0 0 1000 1000">
+        <path
+            d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z">
+        </path>
+    </symbol>
+</svg>
+
+<body class="homepage">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 col-sm-10 col-md-2 col-lg-2 order-2 order-sm-2 order-md-1">
+                    <div class="d-flex d-md-flex justify-content-center align-items-center" style="height: 100%;">
+                        <a href="" class="header-logo">
+                            <img src="images/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-1 col-sm-1 col-md-10 col-lg-7 order-1 order-sm-1 order-md-2">
+                    <button class="btn-mb-menu d-block d-md-none"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <div class="mobile-menu-overlay">
+
+                    </div>
+                    <div class="d-md-flex justify-content-center align-items-center header-menu">
+                        <div class="mobile-menu-top">
+                            <div class="mobie-menu-back">
+                                <a href="#">
+                                    <span class="togo-svg-icon mobile-menu-back">
+                                        <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12" cy="9.1001" r="2.5" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></circle>
+                                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></circle>
+                                            <path d="M17 19.2001C16.6831 13.0134 7.31692 13.0134 7 19.2001"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="mobile-menu-back-text">Login</span>
+                                </a>
+
+                            </div>
+                            <span class="togo-svg-icon mobile-menu-close">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6.00005L6 18M5.99995 6L17.9999 18" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <nav class="navbar navbar-expand-lg navbar-expand-md">
+                            <div class="collapse navbar-collapse show" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Demos
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 6L8.5 10L12.5 6" stroke="#111111" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown mega-item">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Destinations
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 6L8.5 10L12.5 6" stroke="#111111" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">France</a>
+                                            <a class="dropdown-item" href="#">Thailand</a>
+                                            <a class="dropdown-item" href="#">United Kingdom</a>
+                                            <div class="mega-menu">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="mega-destinations">
+                                                                <div class="destinations-nav">
+                                                                    <div class="nav">
+                                                                        <div class="nav-item is-active">
+                                                                            <a href="#">
+                                                                                Top destinations
+                                                                                <span class="togo-svg-icon "><svg
+                                                                                        aria-hidden="true" role="img"
+                                                                                        focusable="false"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M9 18L15 12L9 6"
+                                                                                            stroke="currentColor"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke-linecap="round"
+                                                                                            stroke-linejoin="round">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="nav-item">
+                                                                            <a href="#">
+                                                                                France
+                                                                                <span class="togo-svg-icon ">
+                                                                                    <svg aria-hidden="true" role="img"
+                                                                                        focusable="false"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M9 18L15 12L9 6"
+                                                                                            stroke="currentColor"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke-linecap="round"
+                                                                                            stroke-linejoin="round">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="nav-item">
+                                                                            <a href="#">
+                                                                                Thailand
+                                                                                <span class="togo-svg-icon ">
+                                                                                    <svg aria-hidden="true" role="img"
+                                                                                        focusable="false"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M9 18L15 12L9 6"
+                                                                                            stroke="currentColor"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke-linecap="round"
+                                                                                            stroke-linejoin="round">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="nav-item">
+                                                                            <a href="#">
+                                                                                United Kingdom
+                                                                                <span class="togo-svg-icon ">
+                                                                                    <svg aria-hidden="true" role="img"
+                                                                                        focusable="false"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M9 18L15 12L9 6"
+                                                                                            stroke="currentColor"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke-linecap="round"
+                                                                                            stroke-linejoin="round">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="nav-item">
+                                                                            <a href="#">
+                                                                                United States
+                                                                                <span class="togo-svg-icon ">
+                                                                                    <svg aria-hidden="true" role="img"
+                                                                                        focusable="false"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M9 18L15 12L9 6"
+                                                                                            stroke="currentColor"
+                                                                                            stroke-width="1.5"
+                                                                                            stroke-linecap="round"
+                                                                                            stroke-linejoin="round">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="view-all"><a href="#"
+                                                                            class="togo-button underline">View All</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="destinations-content">
+                                                                    <div class="destinations-box is-active">
+                                                                        <h6 class="title">Top destinations</h6>
+                                                                        <div class="children-list">
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/france.webp"
+                                                                                        alt="France"><span>France</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/thailand.webp"
+                                                                                        alt="Thailand"><span>Thailand</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/uk.webp"
+                                                                                        alt="United Kingdom"><span>United
+                                                                                        Kingdom</span></a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="destinations-box">
+                                                                        <h6 class="title">Top destinations in France
+                                                                        </h6>
+                                                                        <div class="children-list">
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/lyon.webp"
+                                                                                        alt="Lyon"><span>Lyon</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/marselle.webp"
+                                                                                        alt="Marseille"><span>Marseille</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/paris.webp"
+                                                                                        alt="Paris"><span>Paris</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/toulouse.webp"
+                                                                                        alt="Toulouse"><span>Toulouse</span></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="view-all"><a href="#"
+                                                                                class="togo-button underline">View
+                                                                                all</a></div>
+                                                                    </div>
+                                                                    <div class="destinations-box">
+                                                                        <h6 class="title">Top destinations in Thailand
+                                                                        </h6>
+                                                                        <div class="children-list">
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/bangkok.webp"
+                                                                                        alt="Bangkok"><span>Bangkok</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/chieng-mai.webp"
+                                                                                        alt="Chiang Mai"><span>Chiang
+                                                                                        Mai</span></a></div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/phuket.webp"
+                                                                                        alt="Phuket"><span>Phuket</span></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="view-all"><a href="#"
+                                                                                class="togo-button underline">View
+                                                                                all</a></div>
+                                                                    </div>
+                                                                    <div class="destinations-box">
+                                                                        <h6 class="title">Top destinations in United
+                                                                            Kingdom</h6>
+                                                                        <div class="children-list">
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/birmingham.webp"
+                                                                                        alt="Birmingham"><span>Birmingham</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/glasgow.webp"
+                                                                                        alt="Glasgow"><span>Glasgow</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/london.webp"
+                                                                                        alt="London"><span>London</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/manchester.webp"
+                                                                                        alt="Manchester"><span>Manchester</span></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="view-all"><a href="#"
+                                                                                class="togo-button underline">View
+                                                                                all</a></div>
+                                                                    </div>
+                                                                    <div class="destinations-box">
+                                                                        <h6 class="title">Top destinations in United
+                                                                            States</h6>
+                                                                        <div class="children-list">
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/chicago.webp"
+                                                                                        alt="Chicago"><span>Chicago</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/houston.webp"
+                                                                                        alt="Houston"><span>Houston</span></a>
+                                                                            </div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/los-angeles.webp"
+                                                                                        alt="Los Angeles"><span>Los
+                                                                                        Angeles</span></a></div>
+                                                                            <div class="children-item"><a href="#"><img
+                                                                                        src="/images/nyc.webp"
+                                                                                        alt="New York City"><span>New
+                                                                                        York City</span></a></div>
+                                                                        </div>
+                                                                        <div class="view-all"><a href="#"
+                                                                                class="togo-button underline">View
+                                                                                all</a></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="destinations-banner">
+                                                                    <div class="inner">
+                                                                        <h3 class="destinations-banner-title">Togo
+                                                                            Travel Booking WordPress</h3>
+                                                                        <p class="destinations-banner-desc">The most
+                                                                            complete Tour Management System</p><a
+                                                                            href="#" class="togo-button full-filled"
+                                                                            target="_self">Get it now</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Tour listing
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 6L8.5 10L12.5 6" stroke="#111111" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Pages
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 6L8.5 10L12.5 6" stroke="#111111" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 d-none d-md-none d-lg-block order-3 order-sm-3 order-md-3">
+                    <div class="d-md-flex justify-content-end align-items-center">
+                        <a href="" class="header-phone"><img src="images/telephone.svg" alt="">+00 232 6777</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="blog_single">
+        <div class="page-single">
+            <div class="container">
+                <p class="breadcrumb" id="breadcrumbs">
+                    <span class="item">
+                        <a href="">Uncategorized</a>
+                    </span>
+                    <span class="item">
+                        <span>By admin</span>
+                    </span>
+                    <span class="item">
+                        <span>Apr 22 2025</span>
+                    </span>
+                </p>
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                        <h1 class="single-title">Exploring Italy in 10 Days: A Complete Travel Itinerary</h1>
+                        <div class="page-entry">
+                            <div class="page-entry-img">
+                                <img src="images/img-single.jpeg" alt="">
+                            </div>
+                            <div class="page-entry-content">
+                                <p>Lorem ipsum dolor sit amet, adhuc iriure dissentias est in, est ne diam graece
+                                    tincidunt. Sit et liber minimum tacimates, sea no doctus fastidii. An molestiae
+                                    definiebas mel. Quo everti vituperata et, quo cu omnis maiorum. At soluta
+                                    fierenti laboramus eum.Nam at dicant deterruisset. Nam at nulla choro denique,
+                                    cum quando definitionem. Sea te nisl splendide, odio timeam an vim. Quas brute
+                                    aliquam id per, et natum vocent eripuit sea. No mea feugiat nusquam ocurreret
+                                    usu ad alter dicant. Ad aliquip dolorem scribentur, partem libris pri, ad sea
+                                    verear postulant conceptam. Sed appellantur interpretaris cu, meis possit melius
+                                    ut sed. Ex suas definiebas est, id his dicunt torquatos.</p>
+                                <p>Id euismod mentitum dissentiet duo, aeterno eripuit. Comprehensam, principes
+                                    dissentiet est id. Primis eripuit ei vis, ne vis nibh delenit electram duo. At
+                                    pri elitr utinam tempor, purto facilis vim ut. Mediocrem reprimique an vim,
+                                    veniam tibique omittantur duo ut, agam graeci in vim. Quot appetere patrioque te
+                                    mea, animal aliquip te pri. Ad vis animal ceteros percipitur, eos tollit civibus
+                                    percipitur no. Posse definiebas dissentiunt mel ea, nam ferri utroque invenire
+                                    an. Ius te iuvaret offendit pertinax, his verear deseruisse ex. Illud elitr eam
+                                    eu. Id usu putant commune, stet primis expetenda cu vel. Mea ipsum homero
+                                    apeirian te. Accumsan similique instructior ad pro, te purto dicit qui.</p>
+                                <p>Per eu unum persius, mei tantas postea in. Te his labores singulis, eum ei
+                                    urbanitas adversarium. Ut quo numquam honestatis, qui populo percipit intellegat
+                                    ea. Pri laudem tractatos hendrerit an. Qui ad idque soluta deterruisset, nec
+                                    sale pertinax mandamus et. Eu mei soluta scriptorem dissentiet, cu vel sensibus
+                                    cotidieque. Ne per malorum vivendum principes, congue imperdiet cu vel. Sit cu
+                                    stet autem eligendi, eros reprimique mel id, no pri tation altera. At soluta
+                                    fierent laboramus eum.Nam at dicant deterruisset. Nam at nulla choro denique, et
+                                    cum quando. Et est eius pertinax, duo falli noster alienum et.</p>
+                                <p>Quot appetere patrioque te mea, animal aliquip te pri. Ad vis animal ceteros
+                                    percipitur, eos tollit civibus percipitur no. Posse definiebas dissentiunt mel
+                                    ea, nam ferri utroque invenire an. Ius te iuvaret offendit pertinax, his verear
+                                    deseruisse ex. Illud elitr eam eu. Id usu putant commune, stet primis expetenda
+                                    cu vel. Mea ipsum homero apeirian te. Accumsan similique instructior ad pro, te
+                                    purto dicit qui. Mediocrem reprimique an vim, veniam tibique omittantur duo ut,
+                                    agam graeci in vim.&nbsp;An sententiae disputando eos. Delicata voluptaria
+                                    referrentur mel eu. Forensibus disputationi an eam. Sea ex delectus dignissim
+                                    gloriatur, quem suas per ea. In solum menandri cum.</p>
+                            </div>
+                        </div>
+                        <div class="post-single-related">
+                            <h3 class="single-related-title text-center">Related Articles</h3>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="post post-related">
+                                        <a href="" class="post-thumbnail">
+                                            <img src="images/slide1.jpg" alt="">
+                                        </a>
+                                        <div class="post-content">
+                                            <a href="" class="post-cate">Uncategorized</a>
+                                            <h3 class="post-title">
+                                                <a href="">5 Days in Tokyo: Explore Tradition & Futuristic Vibes</a>
+                                            </h3>
+                                            <p class="post-desc">Tokyo is a dynamic city where centuries-old temples sit
+                                                beside neon-lit skyscrapers....</p>
+                                            <a href="" class="post-link">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="post post-related">
+                                        <a href="" class="post-thumbnail">
+                                            <img src="images/slide2.jpg" alt="">
+                                        </a>
+                                        <div class="post-content">
+                                            <a href="" class="post-cate">Uncategorized</a>
+                                            <h3 class="post-title">
+                                                <a href="">5 Days in Tokyo: Explore Tradition & Futuristic Vibes</a>
+                                            </h3>
+                                            <p class="post-desc">Tokyo is a dynamic city where centuries-old temples sit
+                                                beside neon-lit skyscrapers....</p>
+                                            <a href="" class="post-link">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="post post-related">
+                                        <a href="" class="post-thumbnail">
+                                            <img src="images/slide3.jpg" alt="">
+                                        </a>
+                                        <div class="post-content">
+                                            <a href="" class="post-cate">Uncategorized</a>
+                                            <h3 class="post-title">
+                                                <a href="">5 Days in Tokyo: Explore Tradition & Futuristic Vibes</a>
+                                            </h3>
+                                            <p class="post-desc">Tokyo is a dynamic city where centuries-old temples sit
+                                                beside neon-lit skyscrapers....</p>
+                                            <a href="" class="post-link">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-comments">
+                            <h3 class="post-comments-title">Leave a reply</h3>
+                            <p class="post-comments-note">Your email address will not be published. Required fields
+                                are marked *</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="comment">Comment *</label>
+                                    <textarea id="comment" class="input-text form-control" name="comment" required=""
+                                        cols="45" rows="7"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="name">Name *</label>
+                                            <input type="text" class="form-control input-text" id="name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="email">Email *</label>
+                                            <input type="email" class="form-control input-text" id="email" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="email">Website *</label>
+                                            <input type="text" class="form-control input-text" id="web" name="web">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <span class="checkmark"></span>
+                                    <label class="form-check-label" for="exampleCheck1">Save my name, email, and website
+                                        in this browser for the next time I comment.</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-comment">Post Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="box-side">
+                            <h6 class="box-side-title">Search</h6>
+                            <form method="get" class="search-form" action="">
+                                <input type="text" class="search-field form-control" id="s" name="s"
+                                    placeholder="Search...">
+                                <button type="submit" class="btn search-submit">
+                                    <i class="fa fa-search search-btn-icon"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="box-side">
+                            <h6 class="box-side-title">Recent Posts</h6>
+                            <ul class="box-side-list">
+                                <li><a href="">Exploring Italy in 10 Days: A Complete Travel Itinerary</a></li>
+                                <li><a href="">3 Days in Paris: A Short Escape to the City of Lights</a></li>
+                                <li><a href="">One Week in Japan: Tokyo, Kyoto & Osaka Adventure</a></li>
+                                <li><a href="">5 Days in New York City: Landmarks, Culture & Neighborhoods</a></li>
+                                <li><a href="">A Week in Italy: Rome, Florence & Venice Highlights</a></li>
+                            </ul>
+                        </div>
+                        <div class="box-side">
+                            <h6 class="box-side-title">Recent Comments</h6>
+                            <p class="box-side-text">No comments to show.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <p class="footer-title">
+                        Contact us
+                    </p>
+                    <p class="footer-info"><img src="images/envelope.png" alt="">hello@yoursite.com</p>
+                    <p class="footer-info"><img src="images/telephone2.png" alt="">(00) 238 9836</p>
+                    <p class="footer-info"><img src="images/location.png" alt="">351 Humberto Plaza, West Ashtynstead,
+                        Ohio
+                        - 12551, Canada</p>
+                    <a href="" class="footer-btn">Download bruchore</a>
+                </div>
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2">
+                    <p class="footer-title">
+                        Destinations
+                        <span class="icon-menu">
+                            <svg class="icon-down" width='24' height='24' viewBox='0 0 24 24' fill='none'
+                                xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M6 9L12 15L18 9' stroke='currentColor' stroke-width='1.5'
+                                    stroke-linecap='round' stroke-linejoin='round' />
+                            </svg>
+                            <svg class="icon-up" width='24' height='24' viewBox='0 0 24 24' fill='none'
+                                xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M18 15L12 9L6 15' stroke='currentColor' stroke-width='1.5'
+                                    stroke-linecap='round' stroke-linejoin='round' />
+                            </svg>
+                        </span>
+                    </p>
+                    <ul class="footer-menu">
+                        <li><a href="">Singapore</a></li>
+                        <li><a href="">Thailand</a></li>
+                        <li><a href="">Australia</a></li>
+                        <li><a href="">Sri lanka</a></li>
+                        <li><a href="">Norway</a></li>
+                        <li><a href="">Canada</a></li>
+                        <li><a href="">Sweden</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2">
+                    <p class="footer-title">
+                        Company
+                        <span class="icon-menu">
+                            <svg class="icon-down" width='24' height='24' viewBox='0 0 24 24' fill='none'
+                                xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M6 9L12 15L18 9' stroke='currentColor' stroke-width='1.5'
+                                    stroke-linecap='round' stroke-linejoin='round' />
+                            </svg>
+                            <svg class="icon-up" width='24' height='24' viewBox='0 0 24 24' fill='none'
+                                xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M18 15L12 9L6 15' stroke='currentColor' stroke-width='1.5'
+                                    stroke-linecap='round' stroke-linejoin='round' />
+                            </svg>
+                        </span>
+                    </p>
+                    <ul class="footer-menu">
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Carrer</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Partner</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Terms & policies</a></li>
+                        <li><a href="">Trust Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <p class="footer-title">Stay in touch</p>
+                    <p class="footer-text">Subscribe to our Newsletter for the Latest Updates and Special Offers</p>
+                    <form action="" class="footer-form" method="post">
+                        <div class="form-group footer-group">
+                            <input type="text" name="email" class="form-control ip-custom"
+                                placeholder="Enter your email">
+                            <button class="btn btn-submit" type="submit"><img src="images/send.png" alt=""></button>
+                        </div>
+                    </form>
+                    <p class="footer-title">Follow us</p>
+                    <ul class="footer-social">
+                        <li>
+                            <a href="">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5 10V14H9.5V21H13.5V14H16.5L17.5 10H13.5V8C13.5 7.45533 13.9553 7 14.5 7H17.5V3H14.5C11.7767 3 9.5 5.27667 9.5 8V10H6.5Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5 3H7.5C5.01472 3 3 5.01472 3 7.5V16.5C3 18.9853 5.01472 21 7.5 21H16.5C18.9853 21 21 18.9853 21 16.5V7.5C21 5.01472 18.9853 3 16.5 3Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M15.4621 11.4866C15.5701 12.2148 15.4457 12.9585 15.1067 13.612C14.7676 14.2654 14.2311 14.7953 13.5736 15.1263C12.916 15.4573 12.1708 15.5725 11.444 15.4555C10.7171 15.3386 10.0457 14.9954 9.52513 14.4749C9.00457 13.9543 8.66141 13.2829 8.54446 12.556C8.4275 11.8292 8.5427 11.084 8.87368 10.4264C9.20466 9.76886 9.73456 9.23238 10.388 8.89332C11.0415 8.55426 11.7852 8.42988 12.5134 8.53786C13.2562 8.64801 13.9439 8.99414 14.4749 9.52513C15.0059 10.0561 15.352 10.7438 15.4621 11.4866Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M17 6.5H17.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 4.85004C20.1 5.29326 19.218 5.47326 18.3 5.74552C17.2911 4.6013 15.7953 4.53798 14.358 5.07889C12.4268 5.80566 12 7.52863 12 9.36363C9.0795 9.43871 6.4785 8.10181 4.8 5.74552C4.8 5.74552 1.0362 12.4689 8.4 15.6953C6.7152 16.8233 5.0349 17.584 3 17.5044C5.9772 19.1352 9.2217 19.696 12.0306 18.8765C16.66 17.5249 19.3896 13.1539 19.3638 8.479C19.3638 8.25378 20.7228 5.97256 21 4.85004Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 9.90776V14.0923C10.5 14.3174 10.6847 14.5 10.9125 14.5C10.9934 14.5 11.0725 14.4765 11.1399 14.4324L14.3149 12.3582C14.505 12.234 14.5572 11.9811 14.4316 11.7932C14.4016 11.7483 14.3628 11.7097 14.3176 11.6797L11.1426 9.5694C10.9536 9.44378 10.6973 9.49339 10.5702 9.68029C10.5244 9.74755 10.5 9.82675 10.5 9.90776Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M2 12C2 8.70017 2 7.05025 3.46447 6.02513C4.92893 5 7.28595 5 12 5C16.714 5 19.0711 5 20.5355 6.02513C22 7.05025 22 8.70017 22 12C22 15.2998 22 16.9497 20.5355 17.9749C19.0711 19 16.714 19 12 19C7.28595 19 4.92893 19 3.46447 17.9749C2 16.9497 2 15.2998 2 12Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.45184 13.1792C6.34389 10.9181 7.85171 6.51186 12.9237 7.23221C18.5102 8.02564 17.5048 16.7095 12.8469 16.3703C11.373 16.263 10.8157 15.0416 10.6702 13.7937M10.6702 13.7937C10.5599 12.8477 10.6863 11.8865 10.8294 11.3841C11.0736 10.5269 11.4784 10.6435 11.1826 11.7773C11.0386 12.3291 10.863 13.0218 10.6702 13.7937ZM10.6702 13.7937C10.1558 15.8536 9.51973 18.4784 9.0394 20.5017"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></circle>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer-title">Accepted Payment Types</p>
+                    <img src="images/payment logo.png" alt="">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 RiceTheme. All right reserved.</p>
+                <div class="custom-select-wrapper position-relative">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span>En/ USD</span>
+                            <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-title">Currency</a></li>
+                            <li><a class="dropdown-item" href="#">USD</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="dialog-light-box" style="display: none;">
+        <div class="light-box-content">
+            <a role="button" tabindex="0" aria-label="Close (Esc)" href="#"
+                class="dialog-close-button dialog-lightbox-close-button">
+                <svg>
+                    <use xlink:href="#eicon-close"></use>
+                </svg>
+            </a>
+            <div class="dialog-header dialog-lightbox-header"></div>
+            <div class="dialog-message dialog-lightbox-message">
+                <div class="video-dialog">
+                    <div class="video-intro-container" id="video-intro">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="popup-share" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <h6 class="popup-title">Share this:</h6>
+                <ul>
+                    <li>
+                        <a href="" target="_blank">
+                            <span class="svg-icon ">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5 10V14H9.5V21H13.5V14H16.5L17.5 10H13.5V8C13.5 7.45533 13.9553 7 14.5 7H17.5V3H14.5C11.7767 3 9.5 5.27667 9.5 8V10H6.5Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <span class="svg-icon ">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 4L13.0697 10.9303M5 20L10.9303 13.0697M10.9303 13.0697L16.725 19.6568C16.9155 19.8734 17.2084 20 17.5186 20H18.9928C19.8294 20 20.3 19.1493 19.7864 18.5654L13.0697 10.9303M10.9303 13.0697L4.21364 5.43461C3.70001 4.85074 4.17062 4 5.00724 4H6.4814C6.79165 4 7.08452 4.12664 7.275 4.34316L13.0697 10.9303"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <span class="svg-icon ">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5 3H7.5C5.01472 3 3 5.01472 3 7.5V16.5C3 18.9853 5.01472 21 7.5 21H16.5C18.9853 21 21 18.9853 21 16.5V7.5C21 5.01472 18.9853 3 16.5 3Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M8 16.375V10.75M12 16.375V13.5M12 13.5V10.75M12 13.5C12 12.2124 13.222 11.5 14.4 11.5C16 11.5 16 12.875 16 14.375V16.375"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M8 7.625L8 8.125" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <span class="svg-icon ">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.45184 13.1792C6.34389 10.9181 7.85171 6.51186 12.9237 7.23221C18.5102 8.02564 17.5048 16.7095 12.8469 16.3703C11.373 16.263 10.8157 15.0416 10.6702 13.7937M10.6702 13.7937C10.5599 12.8477 10.6863 11.8865 10.8294 11.3841C11.0736 10.5269 11.4784 10.6435 11.1826 11.7773C11.0386 12.3291 10.863 13.0218 10.6702 13.7937ZM10.6702 13.7937C10.1558 15.8536 9.51973 18.4784 9.0394 20.5017"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></circle>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <span class="svg-icon">
+                                <svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5 3H7.5C5.01472 3 3 5.01472 3 7.5V16.5C3 18.9853 5.01472 21 7.5 21H16.5C18.9853 21 21 18.9853 21 16.5V7.5C21 5.01472 18.9853 3 16.5 3Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M15.4621 11.4866C15.5701 12.2148 15.4457 12.9585 15.1067 13.612C14.7676 14.2654 14.2311 14.7953 13.5736 15.1263C12.916 15.4573 12.1708 15.5725 11.444 15.4555C10.7171 15.3386 10.0457 14.9954 9.52513 14.4749C9.00457 13.9543 8.66141 13.2829 8.54446 12.556C8.4275 11.8292 8.5427 11.084 8.87368 10.4264C9.20466 9.76886 9.73456 9.23238 10.388 8.89332C11.0415 8.55426 11.7852 8.42988 12.5134 8.53786C13.2562 8.64801 13.9439 8.99414 14.4749 9.52513C15.0059 10.0561 15.352 10.7438 15.4621 11.4866Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M17 6.5H17.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Action mune mobile -->
+    <!-- End Action mune mobile -->
+    <!-- Search Form -->
+
+    <!-- End Search Form -->
+    <script type="text/javascript" src="assets/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/slick-1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
