@@ -3,6 +3,7 @@ var slide_function = {
         slide_function.gallery_slide();
         slide_function.list_box_service();
         slide_function.tours_releated();
+        slide_function.city_slide();
     },
     gallery_slide: function () {
         var slide = jQuery('.list-gallery .gallery-gird-slide');
@@ -74,6 +75,36 @@ var slide_function = {
                 ],
             });
         }
+    },
+    city_slide: function () {
+        var slide = jQuery('#city-slide');
+        if(slide.length == 0) return;
+        slide.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false,
+            arrows: false,
+            draggable: true,       // cho phép kéo chuột trên desktop
+            swipe: true,           // cho phép vuốt trên di động
+            swipeToSlide: true,    // vuốt đến slide bất kỳ
+            touchMove: true,
+            adaptiveHeight: false,
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1 }
+            }
+            ]
+        });
     },
     list_box_service: function () {
         var slide = jQuery('.list-box-service .list-service');
@@ -465,24 +496,19 @@ jQuery(document).ready(function ($) {
         var $plus = $form.find('.plus');
         var $minus = $form.find('.minus');
 
-        $plus.on('click', function () {
+        $plus.on('click', function (e) {
+            e.stopPropagation();
             var value = parseInt($input.val()) || 0;
             value++;
             $input.val(value);
-
-            if (value > 0) {
-                $minus.removeClass('disabled');
-            }
         });
 
-        $minus.on('click', function () {
+        $minus.on('click', function (e) {
             var value = parseInt($input.val()) || 0;
+            e.stopPropagation();
             if (value > 0) {
                 value--;
                 $input.val(value);
-            }
-            if (value === 0) {
-                $minus.addClass('disabled');
             }
         });
     });
@@ -506,19 +532,21 @@ jQuery(document).ready(function ($) {
 });
 if(jQuery('.formguest').length>0){
     document.querySelectorAll('.formguest').forEach(function(el, index) {
+        const box = el.parentElement.querySelector('.box-formguest');
         el.addEventListener('click', function(e) {
             e.stopPropagation();
             let box = el.parentElement.querySelector('.box-formguest');
-            document.querySelectorAll('.box-formguest').forEach(function(b) {
-                b.classList.remove('show-gues');
-            });
+            console.log('ccccc')
             box.classList.toggle('show-gues');
+        });
+        box.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
     });
     
     document.addEventListener('click', function() {
-        document.querySelectorAll('.box-formguest').forEach(function(b) {
-            b.classList.remove('show-gues');
+        document.querySelectorAll('.box-formguest.show-gues').forEach(function(box) {
+            box.classList.remove('show-gues');
         });
     });
 }

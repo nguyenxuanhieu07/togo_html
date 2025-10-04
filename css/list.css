@@ -71,6 +71,9 @@
     font-size: 16px;
     background: #fff;
 }
+.trip-search-form .form-field input:focus{
+    outline: none;
+}
 .trip-search-form .field-location__remove, .trip-search-form .field-dates__remove, .trip-search-form .field-guests__remove {
     display: none;
     width: 20px;
@@ -151,6 +154,9 @@
 .tours-content{
     background-color: #fbfbfb;
     padding: 40px 0;
+}
+.citypage .tours-content{
+    background-color: #fff;
 }
 .trip-filter{
     max-width: 320px;
@@ -350,6 +356,9 @@
     text-decoration: underline;
     color: #111;
     font-weight: 500;
+}
+.trip-list > .row > .col-lg-4{
+    margin-bottom: 20px;
 }
 .trip-list-header__sort {
     position: relative;
@@ -677,6 +686,9 @@
     cursor: pointer;
     transition: all .3s ease;
 }
+.citypage .open-filter-canvas{
+    display: flex;
+}
 .trip-filter.layout-canvas{
     border-radius: 0;
 }
@@ -716,5 +728,11 @@
         width: 100%;
         border-radius: 0 0 .5rem .5rem;
         height: 48px;
+    }
+    .list-header .trip-list-header__clear-filter {
+        font-size: 14px;
+    }
+    .find-wrapper {
+        padding: 32px 24px;
     }
 }
