@@ -5771,6 +5771,7 @@ a:hover {
 .about-sure .link-more:hover{
     border-color: #EB601A33;
 }
+
 @media only screen and (min-width: 1200px) {
     .blog_single .container {
         max-width: 1200px;
