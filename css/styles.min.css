@@ -186,12 +186,9 @@ a:hover {
     opacity: 0;
     transition: opacity .3s ease;
 }
+
 .togo-fade-in-down.animate {
     opacity: 0;
-    animation: togoAnimationFadeInUp 1s ease forwards;
-}
-
-.togo-fade-in-up.animate {
     animation: togoAnimationFadeInDown 1s ease forwards;
 }
 
