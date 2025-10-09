@@ -186,12 +186,9 @@ a:hover {
     opacity: 0;
     transition: opacity .3s ease;
 }
+
 .togo-fade-in-down.animate {
     opacity: 0;
-    animation: togoAnimationFadeInUp 1s ease forwards;
-}
-
-.togo-fade-in-up.animate {
     animation: togoAnimationFadeInDown 1s ease forwards;
 }
 
@@ -5732,7 +5729,8 @@ a:hover {
     font-size: 1rem;
 }
 .about-sure{
-    padding: 40px 0;
+    padding: 60px 0;
+    background: #FBFBFB;
 }
 .about-sure .inner{
     border: 1px solid #EEEEEE;
