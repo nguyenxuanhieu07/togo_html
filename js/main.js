@@ -632,103 +632,7 @@ if($('.slide-home2').length>0) {
     });
 }
 if($('.tour-slide').length>0) {
-    if($('.tour-slide .trip ')>4){
-        $('.tour-slide').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 4000,
-            speed: 600,
-            arrows: false,
-            dots: true,
-            infinite: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        autoplaySpeed: 3500
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        autoplaySpeed: 3000,
-                        centerMode: false
-                    }
-                },
-                {
-                    breakpoint: 575,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        autoplaySpeed: 2500,
-                        adaptiveHeight: true
-                    }
-                }
-            ]
-        });
-    }
-}
-if($('.trip-list-slide').length>0) {
-    if($('.trip-list-slide .trip ').length > 5){
-        $('.trip-list-slide').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 4000,
-            speed: 600,
-            arrows: false,
-            dots: true,
-            infinite: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        autoplaySpeed: 3500
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        autoplaySpeed: 3000,
-                        centerMode: false
-                    }
-                },
-                {
-                    breakpoint: 575,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,
-                        autoplaySpeed: 2500,
-                        adaptiveHeight: true
-                    }
-                }
-            ]
-        });
-    }
-}
-if($('.home-style-2 .about-why .row').length>0) {
-    $('.home-style-2 .about-why .row').slick({
+    $('.tour-slide').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: false,
@@ -739,7 +643,7 @@ if($('.home-style-2 .about-why .row').length>0) {
         infinite: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -761,6 +665,190 @@ if($('.home-style-2 .about-why .row').length>0) {
             },
             {
                 breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 2500,
+                    adaptiveHeight: true
+                }
+            }
+        ]
+    });
+}
+if($('.trip-list-slide').length>0) {
+    $('.trip-list-slide').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        speed: 600,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3500
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3000,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 2500,
+                    adaptiveHeight: true
+                }
+            }
+        ]
+    });
+}
+if($('.home-style-2 .about-why .row').length>0) {
+    $('.home-style-2 .about-why .row').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        speed: 600,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3500
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3000,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 2500,
+                    adaptiveHeight: true
+                }
+            }
+        ]
+    });
+}
+if($('.home-style-2 .list-team-love').length>0) {
+    $('.home-style-2 .list-team-love').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        speed: 600,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3500
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3000,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 2500,
+                    adaptiveHeight: true
+                }
+            }
+        ]
+    });
+}
+if($('.home-style-2 .post-list-home').length>0) {
+    $('.home-style-2 .post-list-home').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        speed: 600,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3500
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    autoplaySpeed: 3000,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
